@@ -17,7 +17,7 @@ Welcome to my personal dotfiles repository, where I manage all my configuration 
 - **Neofetch**: `~/.config/neofetch/config.conf`
 - **Yabai**: `~/.config/yabai`
 - **Skhd**: `~/.config/skhd`
-- **Raycast**: `~/.config/raycast`
+- **Raycast**: `~/.config/raycast/extensions`
 
 ### Usage
 
