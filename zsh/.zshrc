@@ -31,12 +31,12 @@ bindkey '^[[A' history-search-backward
 bindkey '^[[B' history-search-forward
 
 # Verifica se o tmux já está rodando
-if command -v tmux &> /dev/null; then
-    if [ -z "$TMUX" ]; then
-        # Tenta anexar a uma sessão existente, senão cria uma nova no diretório home
-        tmux attach || (cd ~ && tmux new-session -s home)
-    fi
-fi
+# if command -v tmux &> /dev/null; then
+#     if [ -z "$TMUX" ]; then
+#         # Tenta anexar a uma sessão existente, senão cria uma nova no diretório home
+#         tmux attach || (cd ~ && tmux new-session -s home)
+#     fi
+# fi
 
 
 
