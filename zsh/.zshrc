@@ -70,6 +70,7 @@ alias cls='clear'
 alias live='live-server'
 alias neo='neofetch'
 alias lg='lazygit'
+alias img="viu"
 alias tls="tmux list-sessions"
 alias taa="tmux attach-session -t "
 alias tnn="tmux new-session -s "
@@ -131,3 +132,7 @@ test -e "${HOME}/.iterm2_shell_integration.zsh" && source "${HOME}/.iterm2_shell
 
 # Amazon Q post block. Keep at the bottom of this file.
 [[ -f "${HOME}/Library/Application Support/amazon-q/shell/zshrc.post.zsh" ]] && builtin source "${HOME}/Library/Application Support/amazon-q/shell/zshrc.post.zsh"
+
+#THIS MUST BE AT THE END OF THE FILE FOR SDKMAN TO WORK!!!
+export SDKMAN_DIR="$HOME/.sdkman"
+[[ -s "$HOME/.sdkman/bin/sdkman-init.sh" ]] && source "$HOME/.sdkman/bin/sdkman-init.sh"
