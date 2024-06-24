@@ -14,7 +14,10 @@ ZSH_THEME="robbyrussell"
 plugins=(git zsh-autosuggestions zsh-syntax-highlighting  nvm laravel vi-mode thefuck brew git-flow-avh git-flow)
 
 source $ZSH/oh-my-zsh.sh
+source ~/powerlevel10k/powerlevel10k.zsh-theme
 
+# To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
+[[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
 
 # history setup
 HISTFILE=$HOME/.zhistory
@@ -44,25 +47,8 @@ bindkey '^[[B' history-search-forward
 export PATH=/Users/pedrorosa-dev/.local/bin:$PATH
 
 
-# node
-
-export NVM_DIR="$HOME/.nvm"
-[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
-[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
-
-
-# ruby
-
-export PATH="$HOME/.rbenv/shims:$PATH"
-
-
-# python
-
-export PATH="$HOME/.pyenv/bin:$PATH"
-export PATH="$(pyenv root)/shims:$PATH"
-
-
 #ALIAS
+
 alias P="~/Projects"
 alias rn="lvim"
 alias cls='clear'
@@ -120,18 +106,34 @@ eval $(thefuck --alias fk)
 eval "$(zoxide init zsh)"
 
 alias cd="z"
-source ~/powerlevel10k/powerlevel10k.zsh-theme
 
-# To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
-[[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
-
+# CONSOLE NINJA 
 PATH=~/.console-ninja/.bin:$PATH
 
 test -e "${HOME}/.iterm2_shell_integration.zsh" && source "${HOME}/.iterm2_shell_integration.zsh"
 
-# Amazon Q post block. Keep at the bottom of this file.
-[[ -f "${HOME}/Library/Application Support/amazon-q/shell/zshrc.post.zsh" ]] && builtin source "${HOME}/Library/Application Support/amazon-q/shell/zshrc.post.zsh"
 
+
+# Dependecias de programação 
+
+# node
+
+export NVM_DIR="$HOME/.nvm"
+[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
+[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
+
+
+# ruby
+
+export PATH="$HOME/.rbenv/shims:$PATH"
+
+
+# python
+
+export PATH="$HOME/.pyenv/bin:$PATH"
+export PATH="$(pyenv root)/shims:$PATH"
+
+# JAVA 
 #THIS MUST BE AT THE END OF THE FILE FOR SDKMAN TO WORK!!!
 export SDKMAN_DIR="$HOME/.sdkman"
 [[ -s "$HOME/.sdkman/bin/sdkman-init.sh" ]] && source "$HOME/.sdkman/bin/sdkman-init.sh"
