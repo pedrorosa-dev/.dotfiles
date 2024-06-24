@@ -54,5 +54,5 @@ Welcome to my personal dotfiles repository, where I manage all my configuration 
     ```bash
     stow .
     ```
-
+**REMEMBER:** Some configs like .zshrc and .gitconfig are set with my name, so just change it to yours.
 
