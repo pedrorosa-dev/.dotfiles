@@ -1,12 +1,33 @@
+
 # schema = "https://raw.githubusercontent.com/JanDeDobbeleer/oh-my-posh/main/themes/schema.json"
 version = 2
 console_title_template = '{{ .Shell }} in {{ .Folder }}'
 final_space = true 
 
 [[blocks]]
-  type = "rprompt"
-  alignment = "right"
+  type = "prompt"
+  alignment = "left"
 
+  [[blocks.segments]]
+    type = "os"
+    template = "{{.Icon}}"
+    background = "#111111"
+    foreground = "#9B6BDF"
+    leading_diamond = "\ue0b6"
+    trailing_diamond = "\ue0b4 "
+    style = "diamond"
+
+    [properties]
+    macos = "mac"
+
+  # [[blocks.segments]]
+  # type = "session"
+  # background = "#111111"
+  # foreground = "#9B6BDF"
+  # leading_diamond = "\ue0b6"
+  # trailing_diamond = "\ue0b4 "
+  # style = "diamond"
+  # template = "{{ .UserName }} \u276f"
 
   [[blocks.segments]]
   type = "path"
@@ -131,9 +152,13 @@ final_space = true
   template = "  {{ .Major }}.{{ .Minor }} "
 
 
+[[blocks]]
+  type = "rprompt"
+  alignment = "left"
+
    [[blocks.segments]]
     type = "status"
-    background = "#111111"
+    background = "transparent"
     foreground = "#9B6BDF"
     leading_diamond = "\ue0b6"
     trailing_diamond = "\ue0b4 "
@@ -162,31 +187,7 @@ final_space = true
   # ]
 
 
-[[blocks]]
-  type = "prompt"
-  alignment = "left"
 
-
-  [[blocks.segments]]
-    type = "os"
-    template = "{{.Icon}}"
-    background = "#111111"
-    foreground = "#9B6BDF"
-    leading_diamond = "\ue0b6"
-    trailing_diamond = "\ue0b4 "
-    style = "diamond"
-
-    [properties]
-    macos = "mac"
-
-  [[blocks.segments]]
-  type = "session"
-  background = "#111111"
-  foreground = "#9B6BDF"
-  leading_diamond = "\ue0b6"
-  trailing_diamond = "\ue0b4 "
-  style = "diamond"
-  template = "{{ .UserName }} \u276f"
 
   [[blocks.segments]]
     type = 'executiontime'
@@ -197,3 +198,31 @@ final_space = true
 
     [blocks.segments.properties]
       threshold = 5000
+
+[[blocks]]
+  type = 'prompt'
+  alignment = 'left'
+  newline = true
+
+  [[blocks.segments]]
+    type = 'text'
+    style = 'plain'
+    foreground_templates = [
+      "{{if gt .Code 0}}red{{end}}",
+      "{{if eq .Code 0}}magenta{{end}}",
+    ]
+    background = 'transparent'
+    template = '❯'
+
+[transient_prompt]
+  foreground_templates = [
+    "{{if gt .Code 0}}red{{end}}",
+    "{{if eq .Code 0}}magenta{{end}}",
+  ]
+  background = 'transparent'
+  template = '❯ '
+
+[secondary_prompt]
+  foreground = 'magenta'
+  background = 'transparent'
+  template = '❯❯ '

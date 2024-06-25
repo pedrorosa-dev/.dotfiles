@@ -142,8 +142,6 @@ console_title_template = '{{ .Shell }} in {{ .Folder }}'
     foreground_templates = [ "{{ if gt .Code 0 }}#e91e63{{ end }}" ]
     template = " " ## 󰀦  
 
-
-
       [blocks.segments.properties]
       always_enabled = true
 
