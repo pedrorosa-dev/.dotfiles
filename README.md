@@ -40,9 +40,9 @@ Welcome to my personal dotfiles repository, where I manage all my configuration 
     ```bash
     stow lvim
     stow core
-    stow zsh
-    stow git
-    stow tmux
+    stow .zshrc
+    stow .gitconfig
+    stow .tmux.conf
     stow neofetch
     stow yabai
     stow skhd
