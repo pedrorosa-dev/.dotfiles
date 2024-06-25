@@ -14,3 +14,4 @@ reload('user.telescope_browser')
 
 vim.opt.clipboard = "unnamedplus"
 -- lvim.format_on_save.enabled = true
+lvim.transparent_window = true

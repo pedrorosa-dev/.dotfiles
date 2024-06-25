@@ -11,12 +11,12 @@
 
 # oh my posh
 
-# alguns temas - tokyonight_storm, bubblesline,catppuccin_mocha,
+# alguns temas - tokyonight_storm, catppuccin_mocha
 # eval "$(oh-my-posh init zsh --config $(brew --prefix oh-my-posh)/themes/tokyonight_storm.omp.json)"
 
 # CONFIG PESSOAL DO ohmyposh 
-# cen.toml, zen.toml, xen.toml
-eval "$(oh-my-posh init zsh --config $HOME/.config/ohmyposh/xen.toml)"
+# bubblesboth.toml, zen.toml, bubblesleft.toml
+eval "$(oh-my-posh init zsh --config $HOME/.config/ohmyposh/bubblesboth.toml)"
 
 export ZSH="$HOME/.oh-my-zsh"
 export PATH="/opt/homebrew/opt/ripgrep/bin:$PATH"

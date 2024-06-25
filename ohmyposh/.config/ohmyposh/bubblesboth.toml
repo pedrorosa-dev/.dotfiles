@@ -1,4 +1,3 @@
-# schema = "https://raw.githubusercontent.com/JanDeDobbeleer/oh-my-posh/main/themes/schema.json"
 version = 2
 console_title_template = '{{ .Shell }} in {{ .Folder }}'
 final_space = true 

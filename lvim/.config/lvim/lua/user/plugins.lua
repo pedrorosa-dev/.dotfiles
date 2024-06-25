@@ -16,6 +16,7 @@ lvim.plugins = {
   { "MunifTanjim/nui.nvim" },
   -- { "nvim-neo-tree/neo-tree.nvim" },
   { "folke/twilight.nvim" },
+  { "AndreM222/copilot-lualine" },
   --------------------------------------------
   -- *=================*
   -- | PLUGINS DE TEMA |
