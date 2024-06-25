@@ -132,10 +132,6 @@ console_title_template = '{{ .Shell }} in {{ .Folder }}'
     foreground = "#00B4AB"
     template = "  {{ .Major }}.{{ .Minor }} "
 
-[[blocks]]
-  type = 'rprompt'
-  overflow = 'hidden'
-
    [[blocks.segments]]
     type = "status"
     foreground = "#00897b"
