@@ -84,53 +84,53 @@ console_title_template = '{{ .Shell }} in {{ .Folder }}'
     foreground = "#4063D8"
     template = "  {{ .Major }}.{{ .Minor }} "
 
-  # [[blocks.segments]]
-  #   type = "ruby"
-  #   style = "powerline"
-  #   # foreground = "#ffffff"
-  #   # background = "#4063D8"
-  #   foreground = "#CC342D"
-  #   template = "  {{ .Major }}.{{ .Minor }} "
+  [[blocks.segments]]
+    type = "ruby"
+    style = "powerline"
+    # foreground = "#ffffff"
+    # background = "#4063D8"
+    foreground = "#CC342D"
+    template = "  {{ .Major }}.{{ .Minor }} "
 
-  # [[blocks.segments]]
-  #   type = "python"
-  #   style = "powerline"
-  #   # foreground = "#ffffff"
-  #   # background = "#4063D8"
-  #   foreground = "#FFFF00"
-  #   template = "  {{ .Major }}.{{ .Minor }} "
+  [[blocks.segments]]
+    type = "python"
+    style = "powerline"
+    # foreground = "#ffffff"
+    # background = "#4063D8"
+    foreground = "#FFFF00"
+    template = "  {{ .Major }}.{{ .Minor }} "
 
-  # [[blocks.segments]]
-  #   type = "java"
-  #   style = "powerline"
-  #   # foreground = "#ffffff"
-  #   # background = "#4063D8"
-  #   foreground = "#FF0000"
-  #   template = "  {{ .Major }}.{{ .Minor }} "
+  [[blocks.segments]]
+    type = "java"
+    style = "powerline"
+    # foreground = "#ffffff"
+    # background = "#4063D8"
+    foreground = "#FF0000"
+    template = "  {{ .Major }}.{{ .Minor }} "
 
-  # [[blocks.segments]]
-  #   type = "typescript"
-  #   style = "powerline"
-  #   # foreground = "#ffffff"
-  #   # background = "#4063D8"
-  #   foreground = "#007ACC"
-  #   template = " 󰛦 {{ .Major }}.{{ .Minor }} "
+  [[blocks.segments]]
+    type = "typescript"
+    style = "powerline"
+    # foreground = "#ffffff"
+    # background = "#4063D8"
+    foreground = "#007ACC"
+    template = " 󰛦 {{ .Major }}.{{ .Minor }} "
 
-  # [[blocks.segments]]
-  #   type = "rust"
-  #   style = "powerline"
-  #   # foreground = "#ffffff"
-  #   # background = "#4063D8"
-  #   foreground = "#000000"
-  #   template = "  {{ .Major }}.{{ .Minor }} "
+  [[blocks.segments]]
+    type = "rust"
+    style = "powerline"
+    # foreground = "#ffffff"
+    # background = "#4063D8"
+    foreground = "#000000"
+    template = "  {{ .Major }}.{{ .Minor }} "
 
-  # [[blocks.segments]]
-  #   type = "dart"
-  #   style = "powerline"
-  #   # foreground = "#ffffff"
-  #   # background = "#4063D8"
-  #   foreground = "#00B4AB"
-  #   template = "  {{ .Major }}.{{ .Minor }} "
+  [[blocks.segments]]
+    type = "dart"
+    style = "powerline"
+    # foreground = "#ffffff"
+    # background = "#4063D8"
+    foreground = "#00B4AB"
+    template = "  {{ .Major }}.{{ .Minor }} "
 
 [[blocks]]
   type = 'rprompt'
