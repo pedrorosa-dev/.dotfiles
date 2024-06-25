@@ -47,9 +47,8 @@ console_title_template = '{{ .Shell }} in {{ .Folder }}'
       fetch_upstream_icon = true
       truncate_symbol = '…'
       branch_icon = ' '
-      branch_icon = ''
       commit_icon = '@'
-      fetch_status = true
+
 
       [properties.untracked_modes]
       "/Users/user/Projects/oh-my-posh/" = "no"
