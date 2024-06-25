@@ -17,7 +17,7 @@ Welcome to my personal dotfiles repository, where I manage all my configuration 
 - **Neofetch**: `~/.config/neofetch/config.conf`
 - **Yabai**: `~/.config/yabai`
 - **Skhd**: `~/.config/skhd`
-
+- **Ohmyposh**: `~/.config/ohmyposh/zen.toml`
 ### Usage
 
 1. **Install GNU Stow**:
@@ -48,6 +48,7 @@ Welcome to my personal dotfiles repository, where I manage all my configuration 
     stow neofetch
     stow yabai
     stow skhd
+    stow ohmyposh
     ```
 
 4. **Apply all configurations at once**:
