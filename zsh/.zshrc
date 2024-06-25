@@ -1,11 +1,20 @@
+# powerlevel10k 
 
-if [[ -r "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh" ]]; then
-  source "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh"
-fi
+# if [[ -r "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh" ]]; then
+#   source "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh"
+# fi
+
+# source ~/powerlevel10k/powerlevel10k.zsh-theme
+# To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
+# [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
+
 
 # oh my posh
+
 # alguns temas - tokyonight_storm, bubblesline,catppuccin_mocha,
 eval "$(oh-my-posh init zsh --config $(brew --prefix oh-my-posh)/themes/bubblesline.omp.json)"
+
+# CONFIG PESSOAL DO ohmyposh 
 # eval "$(oh-my-posh init zsh --config $HOME/.config/ohmyposh/zen.toml)"
 
 export ZSH="$HOME/.oh-my-zsh"
@@ -14,13 +23,10 @@ export PATH="$PATH:/Applications/Visual Studio Code.app/Contents/Resources/app/b
 
 ZSH_THEME="robbyrussell"
 
-
+# plugins 
 plugins=(git zsh-autosuggestions zsh-syntax-highlighting  nvm laravel vi-mode thefuck brew git-flow-avh git-flow)
 
 source $ZSH/oh-my-zsh.sh
-# source ~/powerlevel10k/powerlevel10k.zsh-theme
-# To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
-# [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
 
 # history setup
 HISTFILE=$HOME/.zhistory
@@ -35,7 +41,7 @@ setopt hist_verify
 bindkey '^[[A' history-search-backward
 bindkey '^[[B' history-search-forward
 
-# Verifica se o tmux já está rodando
+# iniciar o tmux
 # if command -v tmux &> /dev/null; then
 #     if [ -z "$TMUX" ]; then
 #         # Tenta anexar a uma sessão existente, senão cria uma nova no diretório home
@@ -46,12 +52,10 @@ bindkey '^[[B' history-search-forward
 
 
 #lunar vim
-
 export PATH=/Users/pedrorosa-dev/.local/bin:$PATH
 
 
 #ALIAS
-
 alias P="~/Projects"
 alias rn="lvim"
 alias cls='clear'
@@ -69,7 +73,15 @@ alias tks="tmux kill-session -t "
 
 eval "$(fzf --zsh)"
 
+# --- setup fzf theme ---
+# fg="#CBE0F0"
+# bg="#011628"
+# bg_highlight="#143652"
+# purple="#B388FF"
+# blue="#06BCE4"
+# cyan="#2CF9ED"
 
+# export FZF_DEFAULT_OPTS="--color=fg:${fg},bg:${bg},hl:${purple},fg+:${fg},bg+:${bg_highlight},hl+:${purple},info:${blue},prompt:${cyan},pointer:${cyan},marker:${cyan},spinner:${cyan},header:${cyan}"
 # -- Use fd instead of fzf --
 
 export FZF_DEFAULT_COMMAND="fd --hidden --strip-cwd-prefix --exclude .git"
@@ -120,19 +132,16 @@ test -e "${HOME}/.iterm2_shell_integration.zsh" && source "${HOME}/.iterm2_shell
 # Dependecias de programação 
 
 # node
-
 export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
 [ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
 
 
 # ruby
-
 export PATH="$HOME/.rbenv/shims:$PATH"
 
 
 # python
-
 export PATH="$HOME/.pyenv/bin:$PATH"
 export PATH="$(pyenv root)/shims:$PATH"
 
