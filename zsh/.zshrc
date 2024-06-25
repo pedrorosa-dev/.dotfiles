@@ -1,4 +1,3 @@
-
 # oh my posh
 
 # alguns temas - tokyonight_storm, catppuccin_mocha
