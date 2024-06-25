@@ -11,7 +11,6 @@ Welcome to my personal dotfiles repository, where I manage all my configuration 
 - **LunarVim**: `~/.config/lvim`
 - **LunarVim Core**: `~/.local/share/lunarvim/lvim/lua/lvim/core`
 - **Zsh**: `~/.zshrc`
-- **Powerlevel10k**: `~/.p10k.zsh`
 - **Git**: `~/.gitconfig`
 - **Tmux**: `~/.tmux.conf`
 - **Neofetch**: `~/.config/neofetch/config.conf`
@@ -42,7 +41,6 @@ Welcome to my personal dotfiles repository, where I manage all my configuration 
     stow lvim
     stow core
     stow zsh
-    stow p10k
     stow git
     stow tmux
     stow neofetch
