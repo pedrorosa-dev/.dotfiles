@@ -18,7 +18,7 @@ Welcome to my personal dotfiles repository, where I manage all my configuration 
 - **Yabai**: `~/.config/yabai`
 - **Skhd**: `~/.config/skhd`
 - **Ohmyposh**: `~/.config/ohmyposh/zen.toml`
-### Usage
+### Usage:
 
 1. **Install GNU Stow**:
 
