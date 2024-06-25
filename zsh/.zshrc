@@ -3,6 +3,10 @@ if [[ -r "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh" ]]
   source "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh"
 fi
 
+# oh my posh
+# alguns temas - tokyonight_storm, bubblesline,catppuccin_mocha,
+eval "$(oh-my-posh init zsh --config $(brew --prefix oh-my-posh)/themes/bubblesline.omp.json)"
+# eval "$(oh-my-posh init zsh --config $HOME/.config/ohmyposh/zen.toml)"
 
 export ZSH="$HOME/.oh-my-zsh"
 export PATH="/opt/homebrew/opt/ripgrep/bin:$PATH"
@@ -14,10 +18,9 @@ ZSH_THEME="robbyrussell"
 plugins=(git zsh-autosuggestions zsh-syntax-highlighting  nvm laravel vi-mode thefuck brew git-flow-avh git-flow)
 
 source $ZSH/oh-my-zsh.sh
-source ~/powerlevel10k/powerlevel10k.zsh-theme
-
+# source ~/powerlevel10k/powerlevel10k.zsh-theme
 # To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
-[[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
+# [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
 
 # history setup
 HISTFILE=$HOME/.zhistory
