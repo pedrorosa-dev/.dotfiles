@@ -193,7 +193,7 @@ lvim.plugins = {
           css = { "prettier" },
           javascriptreact = { "prettier", "biome" },
           typescriptreact = { "prettier", "biome" },
-          python = { "black", "isort", "autopep8" },
+          python = { "isort", "autopep8" },
           ruby = { "rubocop" },
           lua = { "stylua" },
         },
