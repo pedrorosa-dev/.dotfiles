@@ -108,6 +108,8 @@ alias cd="z"
 
 # CONSOLE NINJA 
 PATH=~/.console-ninja/.bin:$PATH
+# iterm2
+test -e "${HOME}/.iterm2_shell_integration.zsh" && source "${HOME}/.iterm2_shell_integration.zsh"
 
 
 # Dependências de programação 
@@ -133,6 +135,5 @@ export SDKMAN_DIR="$HOME/.sdkman"
 
 
 
-# iterm2
-test -e "${HOME}/.iterm2_shell_integration.zsh" && source "${HOME}/.iterm2_shell_integration.zsh"
+
 
