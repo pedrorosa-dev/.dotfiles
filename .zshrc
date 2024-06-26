@@ -5,7 +5,7 @@
 
 # CONFIG PESSOAL DO ohmyposh 
 # bubblesboth.toml, zen.toml, bubblesleft.toml
-eval "$(oh-my-posh init zsh --config $HOME/.config/ohmyposh/zen.toml)"
+eval "$(oh-my-posh init zsh --config $HOME/.config/ohmyposh/bubblesboth.toml)"
 
 export ZSH="$HOME/.oh-my-zsh"
 export PATH="/opt/homebrew/opt/ripgrep/bin:$PATH"
