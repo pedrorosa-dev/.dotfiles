@@ -20,6 +20,13 @@ plugins=(git git-flow web-search)
 source $ZSH/oh-my-zsh.sh
 
 
+#lunar vim
+export PATH=/Users/pedrorosa-dev/.local/bin:$PATH
+# CONSOLE NINJA 
+PATH=~/.console-ninja/.bin:$PATH
+# iterm2
+test -e "${HOME}/.iterm2_shell_integration.zsh" && source "${HOME}/.iterm2_shell_integration.zsh"
+
 # history setup
 HISTFILE=$HOME/.zhistory
 SAVEHIST=1000
@@ -40,11 +47,6 @@ bindkey '^[[B' history-search-forward
 #         tmux attach || (cd ~ && tmux new-session -s home)
 #     fi
 # fi
-
-
-
-#lunar vim
-export PATH=/Users/pedrorosa-dev/.local/bin:$PATH
 
 
 #ALIAS
@@ -105,14 +107,8 @@ eval "$(zoxide init zsh)"
 
 alias cd="z"
 
-# CONSOLE NINJA 
-PATH=~/.console-ninja/.bin:$PATH
-# iterm2
-test -e "${HOME}/.iterm2_shell_integration.zsh" && source "${HOME}/.iterm2_shell_integration.zsh"
-
 
 # Dependências de programação 
-
 # node
 export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
@@ -131,8 +127,3 @@ export PATH="$(pyenv root)/shims:$PATH"
 #THIS MUST BE AT THE END OF THE FILE FOR SDKMAN TO WORK!!!
 export SDKMAN_DIR="$HOME/.sdkman"
 [[ -s "$HOME/.sdkman/bin/sdkman-init.sh" ]] && source "$HOME/.sdkman/bin/sdkman-init.sh"
-
-
-
-
-
