@@ -1,4 +1,4 @@
-# oh my posh
+## oh my posh
 
 # alguns temas - tokyonight_storm, catppuccin_mocha
 # eval "$(oh-my-posh init zsh --config $(brew --prefix oh-my-posh)/themes/tokyonight_storm.omp.json)"
@@ -110,7 +110,7 @@ alias cd="z"
 PATH=~/.console-ninja/.bin:$PATH
 
 
-# Dependecias de programação 
+# Dependências de programação 
 
 # node
 export NVM_DIR="$HOME/.nvm"
