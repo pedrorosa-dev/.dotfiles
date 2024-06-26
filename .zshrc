@@ -89,8 +89,7 @@ source ~/fzf-git.sh/fzf-git.sh
 
 
 # ----- Bat (better cat) -----
-
-export BAT_THEME=tokyonight_night
+alias cat="bat"
 
 # ---- Eza (better ls) -----
 
