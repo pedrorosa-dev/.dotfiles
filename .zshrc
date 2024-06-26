@@ -4,7 +4,7 @@
 # eval "$(oh-my-posh init zsh --config $(brew --prefix oh-my-posh)/themes/tokyonight_storm.omp.json)"
 
 # CONFIG PESSOAL DO ohmyposh 
-# bubblesboth.toml, zen.toml, bubblesleft.toml
+# bubblesboth.toml, zen.toml, bubblesleft.toml, warpzen.toml, warpbubblesleft.toml, warpbubblesboth.toml
 eval "$(oh-my-posh init zsh --config $HOME/.config/ohmyposh/bubblesboth.toml)"
 
  export ZSH="$HOME/.oh-my-zsh"

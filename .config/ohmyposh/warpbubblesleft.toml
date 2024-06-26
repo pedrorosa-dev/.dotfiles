@@ -1,0 +1,201 @@
+
+
+version = 2
+console_title_template = '{{ .Shell }} in {{ .Folder }}'
+final_space = true 
+
+[[blocks]]
+  type = "prompt"
+  alignment = "left"
+
+  [[blocks.segments]]
+    type = "os"
+    template = "{{.Icon}}"
+    background = "#111111"
+    foreground = "#9B6BDF"
+    leading_diamond = "\ue0b6"
+    trailing_diamond = "\ue0b4 "
+    style = "diamond"
+
+    [properties]
+    macos = "mac"
+
+  # [[blocks.segments]]
+  # type = "session"
+  # background = "#111111"
+  # foreground = "#9B6BDF"
+  # leading_diamond = "\ue0b6"
+  # trailing_diamond = "\ue0b4 "
+  # style = "diamond"
+  # template = "{{ .UserName }} \u276f"
+
+  [[blocks.segments]]
+  type = "path"
+  background = "#111111"
+  foreground = "#3EC669"
+  leading_diamond = "\ue0b6"
+  trailing_diamond = "\ue0b4"
+  style = "diamond"
+  template = "\ue5ff {{ .Path }}"
+    [blocks.segments.properties]
+      style = 'powerlevel'
+      folder_icon = ''
+      home_icon = ' '
+      max_width = 20
+      cycle = ['cyan', 'magenta', 'blue']
+
+
+  [[blocks.segments]]
+    type = "git"
+    style = "diamond"
+    foreground = "#43CCEA"
+    background = "#292929"
+    leading_diamond = " \ue0b6"
+    trailing_diamond = "\ue0b4"
+    foreground_templates = [
+      "{{ if or (.Working.Changed) (.Staging.Changed) }}#FFEB3B{{ end }}",
+      "{{ if and (gt .Ahead 0) (gt .Behind 0) }}#FFCC80{{ end }}",
+      "{{ if gt .Ahead 0 }}#B388FF{{ end }}",
+      "{{ if gt .Behind 0 }}#B388FB{{ end }}"
+    ]
+    template = "<#FFFFFF>{{ url .UpstreamIcon .UpstreamURL }}</> {{ .HEAD }}{{if .BranchStatus }} {{ .BranchStatus }}{{ end }}{{ if .Working.Changed }}  <#22d3ee> ?{{.Working.Untracked}}</> ~{{ .Working.Modified }}{{ end }}{{ if and (.Working.Changed) (.Staging.Changed) }} |{{ end }}{{ if .Staging.Changed }}  {{ .Staging.String }}{{ end }}{{ if gt .StashCount 0 }}<#34d399>  {{ .StashCount }}</>{{ end }}"
+
+    [blocks.segments.properties]
+      fetch_status = true
+      branch_max_length = 25
+      fetch_upstream_icon = true
+      truncate_symbol = '…'
+      branch_icon = ' '
+      commit_icon = '@'
+
+
+      [properties.untracked_modes]
+      "/Users/user/Projects/oh-my-posh/" = "no"
+
+
+
+
+  [[blocks.segments]]
+  type = "python"
+  background = "#424242"
+  foreground = "#E4F34A"
+  leading_diamond = " \ue0b6"
+  trailing_diamond = "\ue0b4"
+  style = "diamond"
+  template = "  {{ .Major }}.{{ .Minor }} "
+
+
+  [[blocks.segments]]
+  type = "node"
+  background = "#424242"
+  foreground = "#42E66C"
+  leading_diamond = " \ue0b6"
+  trailing_diamond = "\ue0b4"
+  style = "diamond"
+  template = "  {{ .Major }}.{{ .Minor }} "
+
+  [[blocks.segments]]
+  type = "ruby"
+  background = "#424242"
+  foreground = "#E64747"
+  leading_diamond = " \ue0b6"
+  trailing_diamond = "\ue0b4"
+  style = "diamond"
+  template = "  {{ .Major }}.{{ .Minor }} "
+
+  [[blocks.segments]]
+  type = "java"
+  background = "#424242"
+  foreground = "#E64747"
+  leading_diamond = " \ue0b6"
+  trailing_diamond = "\ue0b4"
+  style = "diamond"
+  template = "  {{ .Major }}.{{ .Minor }} "
+
+
+  [[blocks.segments]]
+  type = "php"
+  background = "#4063D8"
+  foreground = "#ffffff"
+  leading_diamond = " \ue0b6"
+  trailing_diamond = "\ue0b4"
+  style = "diamond"
+  template = "  {{ .Major }}.{{ .Minor }} "
+
+  [[blocks.segments]]
+  type = "typescript"
+  background = "#4063D8"
+  foreground = "#007ACC"
+  leading_diamond = " \ue0b6"
+  trailing_diamond = "\ue0b4"
+  style = "diamond"
+  template = " 󰛦 {{ .Major }}.{{ .Minor }} "
+
+
+  [[blocks.segments]]
+  type = "rust"
+  background = "#ffffff"
+  foreground = "#000000"
+  leading_diamond = " \ue0b6"
+  trailing_diamond = "\ue0b4"
+  style = "diamond"
+  template = "  {{ .Major }}.{{ .Minor }} "
+
+
+  [[blocks.segments]]
+  type = "dart"
+  background = "#ffffff"
+  foreground = "#00b4AB"
+  leading_diamond = " \ue0b6"
+  trailing_diamond = "\ue0b4"
+  style = "diamond"
+  template = "  {{ .Major }}.{{ .Minor }} "
+
+
+[[blocks]]
+  type = "rprompt"
+  alignment = "left"
+
+   [[blocks.segments]]
+    type = "status"
+    background = "transparent"
+    foreground = "#9B6BDF"
+    leading_diamond = "\ue0b6"
+    trailing_diamond = "\ue0b4 "
+    foreground_templates = [ "{{ if gt .Code 0 }}#e91e63{{ end }}" ]
+    template = " " ## 󰀦  
+
+      [blocks.segments.properties]
+      always_enabled = true
+
+  # [[blocks.segments]]
+  # type = "battery"
+  # background = "#111111"
+  # foreground = "#9B6BDF"
+  # leading_diamond = " \ue0b6"
+  # trailing_diamond = "\ue0b4"
+  # style = "diamond"
+  # template = "{{ if not .Error }}{{ .Icon }}{{ .Percentage }}{{ end }}{{ .Error }}"
+  #   [blocks.segments.properties]
+  #   charged_icon = "\u25cf "
+  #   charging_icon = "\u21e1 "
+  #   discharging_icon = "\u21e3 "
+  # foreground_templates = [
+  #   "{{if eq \"Charging\" .State.String}}#40c4ff{{end}}",
+  #   "{{if eq \"Discharging\" .State.String}}#ff5722{{end}}",
+  #   "{{if eq \"Full\" .State.String}}#4caf50{{end}}"
+  # ]
+
+
+
+
+  [[blocks.segments]]
+    type = 'executiontime'
+    style = 'plain'
+    foreground = 'yellow'
+    background = 'transparent'
+    template = '{{ .FormattedMs }}'
+
+    [blocks.segments.properties]
+      threshold = 5000
+
