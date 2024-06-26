@@ -1,6 +1,3 @@
-# iterm2
-test -e "${HOME}/.iterm2_shell_integration.zsh" && source "${HOME}/.iterm2_shell_integration.zsh"
-
 # oh my posh
 
 # alguns temas - tokyonight_storm, catppuccin_mocha
@@ -16,8 +13,12 @@ export PATH="$PATH:/Applications/Visual Studio Code.app/Contents/Resources/app/b
 
 ZSH_THEME="robbyrussell"
 
+
 # plugins 
-plugins=(git zsh-autosuggestions zsh-syntax-highlighting  git-flow web-search)
+
+source $(brew --prefix)/share/zsh-autosuggestions/zsh-autosuggestions.zsh
+source $(brew --prefix)/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
+plugins=(git git-flow web-search)
 
 source $ZSH/oh-my-zsh.sh
 
@@ -110,8 +111,6 @@ alias cd="z"
 PATH=~/.console-ninja/.bin:$PATH
 
 
-
-
 # Dependecias de programação 
 
 # node
@@ -132,3 +131,9 @@ export PATH="$(pyenv root)/shims:$PATH"
 #THIS MUST BE AT THE END OF THE FILE FOR SDKMAN TO WORK!!!
 export SDKMAN_DIR="$HOME/.sdkman"
 [[ -s "$HOME/.sdkman/bin/sdkman-init.sh" ]] && source "$HOME/.sdkman/bin/sdkman-init.sh"
+
+
+
+# iterm2
+test -e "${HOME}/.iterm2_shell_integration.zsh" && source "${HOME}/.iterm2_shell_integration.zsh"
+
