@@ -7,20 +7,19 @@
 # bubblesboth.toml, zen.toml, bubblesleft.toml, warpzen.toml, warpbubblesleft.toml, warpbubblesboth.toml
 eval "$(oh-my-posh init zsh --config $HOME/.config/ohmyposh/bubblesboth.toml)"
 
- export ZSH="$HOME/.oh-my-zsh"
+export ZSH="$HOME/.oh-my-zsh"
 export PATH="/opt/homebrew/opt/ripgrep/bin:$PATH"
 export PATH="$PATH:/Applications/Visual Studio Code.app/Contents/Resources/app/bin"
 
 ZSH_THEME="robbyrussell"
 
 
-# plugins 
-
+# plugins oh my zsh 
 source $(brew --prefix)/share/zsh-autosuggestions/zsh-autosuggestions.zsh
 source $(brew --prefix)/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 plugins=(git git-flow web-search)
-
 source $ZSH/oh-my-zsh.sh
+
 
 # history setup
 HISTFILE=$HOME/.zhistory
