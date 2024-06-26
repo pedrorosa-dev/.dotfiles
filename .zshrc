@@ -10,14 +10,14 @@ test -e "${HOME}/.iterm2_shell_integration.zsh" && source "${HOME}/.iterm2_shell
 # bubblesboth.toml, zen.toml, bubblesleft.toml
 eval "$(oh-my-posh init zsh --config $HOME/.config/ohmyposh/bubblesboth.toml)"
 
-export ZSH="$HOME/.oh-my-zsh"
+ export ZSH="$HOME/.oh-my-zsh"
 export PATH="/opt/homebrew/opt/ripgrep/bin:$PATH"
 export PATH="$PATH:/Applications/Visual Studio Code.app/Contents/Resources/app/bin"
 
 ZSH_THEME="robbyrussell"
 
 # plugins 
-plugins=(git zsh-autosuggestions zsh-syntax-highlighting  nvm laravel vi-mode thefuck brew git-flow-avh git-flow)
+plugins=(git zsh-autosuggestions zsh-syntax-highlighting  git-flow web-search)
 
 source $ZSH/oh-my-zsh.sh
 
