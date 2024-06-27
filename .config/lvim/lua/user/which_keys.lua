@@ -53,7 +53,7 @@ lvim.builtin.which_key.mappings["P"] = {
 
 lvim.builtin.which_key.mappings["x"] = {
   name = "+New File",
-  n = { "<cmd>AdvancedNewFile<cr>", "New File" }
+  a = { "<cmd>AdvancedNewFile<cr>", "New File" }
 }
 
 
@@ -71,8 +71,8 @@ lvim.builtin.which_key.mappings["z"] = {
 
 
 
-lvim.builtin.which_key.mappings["<C-t>"] = {
-  name = "+Telescope",
+lvim.builtin.which_key.mappings[":"] = {
+  name = "+Telescope Browser",
   f = { "<cmd>Telescope file_browser<cr>", "File Browser" }
 }
 
@@ -80,10 +80,10 @@ lvim.builtin.which_key.mappings["<C-t>"] = {
 
 lvim.builtin.which_key.mappings["o"] = {
   name = "+Harpoon",
-  x = { "<cmd>lua require('harpoon.mark').add_file()<cr>", "Add File" },
+  a = { "<cmd>lua require('harpoon.mark').add_file()<cr>", "Add File" },
   d = { "<cmd>lua require('harpoon.ui').toggle_quick_menu()<cr>", "Delete" },
-  n = { "<cmd>lua require('harpoon.ui').nav_next()<cr>", "Nav Next" },
-  p = { "<cmd>lua require('harpoon.ui').nav_prev()<cr>", "Nav Prev" },
+  j = { "<cmd>lua require('harpoon.ui').nav_next()<cr>", "Nav Next" },
+  k = { "<cmd>lua require('harpoon.ui').nav_prev()<cr>", "Nav Prev" },
   t = { "<cmd>Telescope harpoon marks<cr>", "Harpoon Marks" },
 
 }
