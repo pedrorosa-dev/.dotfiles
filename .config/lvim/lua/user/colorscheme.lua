@@ -1,4 +1,4 @@
-lvim.colorscheme = "catppuccin-mocha"
+lvim.colorscheme = "kanagawa-dragon"
 
 
 require("nvim-highlight-colors").setup({})
