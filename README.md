@@ -8,7 +8,7 @@ Welcome to my personal dotfiles repository, where I manage all my configuration 
 
 ### Included Configurations
 
-- **Lvim**: `~/.config/lvim`
+- **lvim**: `~/.config/lvim`
 - **core**: `~/.local/share/lunarvim/lvim/lua/lvim/core`
 - **.zshrc**: `~/.zshrc`
 - **.gitconfig**: `~/.gitconfig`
