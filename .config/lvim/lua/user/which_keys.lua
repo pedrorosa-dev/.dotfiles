@@ -29,14 +29,7 @@ lvim.builtin.which_key.mappings["n"] = {
   t = { "<cmd>DiffviewToggleFiles<cr>", "DiffView Toggle Files" },
 }
 
-lvim.builtin.which_key.mappings["P"] = {
-  name = "+Pomodoro",
-  s = { "<cmd>PomodoroStart<cr>", "Pomodoro Start" },
-  t = { "<cmd>PomodoroStop<cr>", "Pomodoro Stop" },
-  r = { "<cmd>PomodoroStatus<cr>", "Pomodoro Status" },
-}
 
--- WICH KEYS DO COPILOT
 lvim.builtin.which_key.mappings["C"] = {
   name = "+Copilot",
   c = { "<cmd>Copilot<cr>", "Copilot" },
@@ -44,29 +37,25 @@ lvim.builtin.which_key.mappings["C"] = {
   p = { "<cmd>CopilotPanel<cr>", "Copilot Panel" },
 }
 
--- -- WICH KEYS DO TOGGLETERM
 -- lvim.builtin.which_key.mappings["o"] = {
 --   name = "+Terminal",
 --   t = { "<cmd>ToggleTerm<cr>", "Open Terminal" },
 -- }
 
 
--- WICH KEYS DO TWILIGHT
 
-lvim.builtin.which_key.mappings["o"] = {
+lvim.builtin.which_key.mappings["P"] = {
   name = "+Twilight",
   e = { "<cmd>TwilightEnable<cr>", "Twilight Enable" },
   d = { "<cmd>TwilightDisable<cr>", "Twilight Disable" },
 }
 
--- WICH KEYS DO Advanced new file
 
 lvim.builtin.which_key.mappings["x"] = {
   name = "+New File",
   n = { "<cmd>AdvancedNewFile<cr>", "New File" }
 }
 
--- WICH KEYS DO OIL
 
 lvim.builtin.which_key.mappings["z"] = {
   name = "+Oil",
@@ -74,17 +63,27 @@ lvim.builtin.which_key.mappings["z"] = {
 }
 
 
--- wich keys do fine-cdmline
 
-lvim.builtin.which_key.mappings[":"] = {
-  name = "+Fine-Cmdline",
-  f = { "<cmd>FineCmdline<cr>", "Fine-Cmdline" }
-}
+-- lvim.builtin.which_key.mappings[":"] = {
+--   name = "+Fine-Cmdline",
+--   f = { "<cmd>FineCmdline<cr>", "Fine-Cmdline" }
+-- }
 
 
--- wich keys do telescope file_browser
 
 lvim.builtin.which_key.mappings["<C-t>"] = {
   name = "+Telescope",
   f = { "<cmd>Telescope file_browser<cr>", "File Browser" }
+}
+
+
+
+lvim.builtin.which_key.mappings["o"] = {
+  name = "+Harpoon",
+  x = { "<cmd>lua require('harpoon.mark').add_file()<cr>", "Add File" },
+  d = { "<cmd>lua require('harpoon.ui').toggle_quick_menu()<cr>", "Delete" },
+  n = { "<cmd>lua require('harpoon.ui').nav_next()<cr>", "Nav Next" },
+  p = { "<cmd>lua require('harpoon.ui').nav_prev()<cr>", "Nav Prev" },
+  t = { "<cmd>Telescope harpoon marks<cr>", "Harpoon Marks" },
+
 }

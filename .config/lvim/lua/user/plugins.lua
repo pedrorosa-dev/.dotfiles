@@ -17,6 +17,7 @@ lvim.plugins = {
   -- { "nvim-neo-tree/neo-tree.nvim" },
   { "folke/twilight.nvim" },
   { "AndreM222/copilot-lualine" },
+  { "ThePrimeagen/harpoon" },
   --------------------------------------------
   -- *=================*
   -- | PLUGINS DE TEMA |
@@ -79,21 +80,6 @@ lvim.plugins = {
         -- Configuration here, or leave empty to use defaults
       })
     end,
-  },
-  {
-    "wthollingsworth/pomodoro.nvim",
-    event = "VeryLazy",
-    config = function()
-      require("pomodoro").setup({
-        time_work = 25,
-        time_break_short = 5,
-        time_break_long = 20,
-        timers_to_long_break = 4,
-      })
-    end,
-    dependencies = {
-      "MunifTanjim/nui.nvim",
-    },
   },
   {
     "zbirenbaum/copilot.lua",
