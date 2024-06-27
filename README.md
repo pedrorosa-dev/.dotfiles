@@ -37,19 +37,12 @@ Welcome to my personal dotfiles repository, where I manage all my configuration 
 
 
 3. **Apply configurations**:
+4. Example:
     ```bash
     stow lvim
-    stow core
-    stow .zshrc
-    stow .gitconfig
-    stow .tmux.conf
-    stow neofetch
-    stow yabai
-    stow skhd
-    stow ohmyposh
     ```
 
-4. **Apply all configurations at once**:
+5. **Apply all configurations at once**:
     ```bash
     stow .
     ```
