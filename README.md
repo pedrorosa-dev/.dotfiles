@@ -8,15 +8,15 @@ Welcome to my personal dotfiles repository, where I manage all my configuration 
 
 ### Included Configurations
 
-- **LunarVim**: `~/.config/lvim`
-- **LunarVim Core**: `~/.local/share/lunarvim/lvim/lua/lvim/core`
-- **Zsh**: `~/.zshrc`
-- **Git**: `~/.gitconfig`
-- **Tmux**: `~/.tmux.conf`
-- **Neofetch**: `~/.config/neofetch/config.conf`
-- **Yabai**: `~/.config/yabai`
-- **Skhd**: `~/.config/skhd`
-- **Ohmyposh**: `~/.config/ohmyposh`
+- **Lvim**: `~/.config/lvim`
+- **core**: `~/.local/share/lunarvim/lvim/lua/lvim/core`
+- **.zshrc**: `~/.zshrc`
+- **.gitconfig**: `~/.gitconfig`
+- **.tmux.conf**: `~/.tmux.conf`
+- **neofetch**: `~/.config/neofetch/config.conf`
+- **yabai**: `~/.config/yabai`
+- **skhd**: `~/.config/skhd`
+- **ohmyposh**: `~/.config/ohmyposh`
 ### Usage
 
 1. **Install GNU Stow**:
