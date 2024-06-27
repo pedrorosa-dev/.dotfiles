@@ -120,7 +120,8 @@ M.config = function()
         "Find File",
       },
       ["h"] = { "<cmd>nohlsearch<CR>", "No Highlight" },
-      ["e"] = { "<cmd>NvimTreeToggle<CR>", "Explorer" },
+      ["E"] = { "<cmd>NvimTreeToggle<CR>", "Old Explorer" },
+      ["e"] = { "<cmd>Neotree toggle<CR>", "Explorer " },
       b = {
         name = "Buffers",
         j = { "<cmd>BufferLinePick<cr>", "Jump" },
