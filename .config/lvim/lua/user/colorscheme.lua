@@ -16,8 +16,8 @@ dracula.setup({
     yellow = "#94E59B", --  original #F1FA8C   #94E59B
     green = "#EEA177",  --  original #50FA7B   #EEA177
     purple = "#B0BEFF", --  original #BD93F9   #B0BEFF
-    cyan = "#f95aa5",
-    pink = "#FF92DF",
+    cyan = "#D1A4FD",   -- original  #f95aa5    #D1A4FD
+    pink = "#FF92DF",   -- original  #FF92DF   #B2BEFF
     bright_red = "#FFFFFF",
     bright_green = "#69FF94",
     bright_yellow = "#FFFFA5",
