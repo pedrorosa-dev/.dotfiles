@@ -4,7 +4,7 @@ This repository is licensed under the [MIT License](LICENSE).
 
 ## About
 
-Welcome to my personal dotfiles repository, where I manage all my configuration files using [GNU Stow](https://www.gnu.org/software/stow/). This setup allows me to maintain a clean and organized home directory, while making it easy to apply my preferred configurations across different machines.
+Welcome to my personal dotfiles repository, where I manage all my configuration files using [GNU Stow](https://www.gnu.org/software/stow/). This setup allows me to maintain a clean and organized home directory while making it easy to apply my preferred configurations across different machines.
 
 ### Included Configurations
 
@@ -17,6 +17,7 @@ Welcome to my personal dotfiles repository, where I manage all my configuration 
 - **yabai**: `~/.config/yabai`
 - **skhd**: `~/.config/skhd`
 - **ohmyposh**: `~/.config/ohmyposh`
+
 ### Usage
 
 1. **Install GNU Stow**:
@@ -35,16 +36,19 @@ Welcome to my personal dotfiles repository, where I manage all my configuration 
     git clone https://github.com/pedrorosa-dev/.dotfiles.git
     ```
 
-
 3. **Apply configurations**:
-4. Example:
+
+    Example: Navigate to the `lvim` configuration directory:
+    ```bash
+    cd .config 
+    ```
     ```bash
     stow lvim
     ```
 
-5. **Apply all configurations at once**:
+4. **Apply all configurations at once**:
     ```bash
     stow .
     ```
-**REMEMBER:** Some configs like .zshrc and .gitconfig are set with my name, so just change it to yours.
 
+**REMEMBER:** Some configs, like `.zshrc` and `.gitconfig`, are set with my name, so just change it to yours.
