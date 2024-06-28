@@ -36,7 +36,12 @@ Welcome to my personal dotfiles repository, where I manage all my configuration 
     git clone https://github.com/pedrorosa-dev/.dotfiles.git
     ```
 
-3. **Apply configurations**:
+3. **Navigate to the .dotfiles directory**:
+    ```bash
+    cd .dotfiles
+    ```
+
+4. **Apply configurations**:
 
     Example: Navigate to the `lvim` configuration directory:
     ```bash
@@ -46,7 +51,7 @@ Welcome to my personal dotfiles repository, where I manage all my configuration 
     stow lvim
     ```
 
-4. **Apply all configurations at once**:
+5. **Apply all configurations at once**:
     ```bash
     stow .
     ```
