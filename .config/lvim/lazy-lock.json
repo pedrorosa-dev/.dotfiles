@@ -42,7 +42,6 @@
   "minimal.nvim": { "branch": "main", "commit": "22d837b814d3bd22625640ef63cc73b8507f291d" },
   "molokai": { "branch": "master", "commit": "c67bdfcdb31415aa0ade7f8c003261700a885476" },
   "monokai-pro.nvim": { "branch": "master", "commit": "2bad2a92fe0ff6c8581d33a853a1b17592b83239" },
-  "neo-tree.nvim": { "branch": "main", "commit": "206241e451c12f78969ff5ae53af45616ffc9b72" },
   "neodev.nvim": { "branch": "main", "commit": "ce9a2e8eaba5649b553529c5498acb43a6c317cd" },
   "nlsp-settings.nvim": { "branch": "main", "commit": "707b43110daf27c1aec8c16c2a92c2cb9a06f8df" },
   "no-clown-fiesta.nvim": { "branch": "master", "commit": "caf86fbc3cf390cac8c5fba599f1500f49f622d7" },
@@ -99,5 +98,6 @@
   "vim-visual-multi": { "branch": "master", "commit": "b84a6d42c1c10678928b0bf8327f378c8bc8af5a" },
   "vscode_modern_theme.nvim": { "branch": "main", "commit": "f90402f936654611bc3a74cc0ba225cbb44a1e9c" },
   "which-key.nvim": { "branch": "main", "commit": "4433e5ec9a507e5097571ed55c02ea9658fb268a" },
+  "yazi.nvim": { "branch": "master", "commit": "0e7dce1a936b92099180ff80cbf35eb7e8a5f660" },
   "zen-mode.nvim": { "branch": "main", "commit": "78557d972b4bfbb7488e17b5703d25164ae64e6a" }
 }
