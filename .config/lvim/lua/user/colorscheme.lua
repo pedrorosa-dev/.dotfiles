@@ -12,7 +12,7 @@ dracula.setup({
     selection = "#1e1d22", -- #44475A
     comment = "#51506e",
     red = "#FF5555",
-    orange = "#FFB86C", --  original #94E59B
+    orange = "#FFB86C",
     yellow = "#94E59B", --  original #F1FA8C   #94E59B
     green = "#EEA177",  --  original #50FA7B   #EEA177
     purple = "#B0BEFF", --  original #BD93F9   #B0BEFF
