@@ -71,7 +71,14 @@ lvim.builtin.which_key.mappings["z"] = {
 
 
 
-lvim.builtin.which_key.mappings[":"] = {
+lvim.builtin.which_key.mappings["r"] = {
   name = "+Telescope Browser",
   f = { "<cmd>Telescope file_browser<cr>", "File Browser" }
+}
+
+
+
+lvim.builtin.which_key.mappings[":"] = {
+  name = "+Renamer",
+  r = { "<cmd>lua require('renamer').rename()<cr>", "Rename" }
 }

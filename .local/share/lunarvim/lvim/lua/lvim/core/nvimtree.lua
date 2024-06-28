@@ -27,10 +27,10 @@ function M.config()
       view = {
         adaptive_size = false,
         centralize_selection = true,
-        width = 30,
+        width = 37,
         cursorline = true,
         debounce_delay = 15,
-        side = "left",
+        side = "right",
         preserve_window_proportions = false,
         number = false,
         relativenumber = false,
