@@ -1,9 +1,9 @@
-local ok, copilot = pcall(require, "copilot")
+local ok, codeium = pcall(require, "codeium")
 if not ok then
   return
 end
 
-copilot.setup({
+codeium.setup({
   suggestion = {
     keymap = {
       accept = "<C-l>",
@@ -13,9 +13,7 @@ copilot.setup({
     },
     auto_trigger = true, -- Ativar sugestões automáticas
   },
-  {
-    experimental = {
-      ghost_text = true,
-    },
+  experimental = {
+    ghost_text = true,
   },
 })
