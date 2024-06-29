@@ -31,7 +31,7 @@ function M.config()
 
     -- Don't calculate root dir on specific directories
     -- Ex: { "~/.cargo/*", ... }
-    exclude_dirs = {},
+    exclude_dirs = { "/Users/pedrorosa-dev" },
 
     -- Show hidden files in telescope
     show_hidden = false,

@@ -61,6 +61,7 @@ alias tls="tmux list-sessions"
 alias taa="tmux attach-session -t "
 alias tnn="tmux new-session -s "
 alias tks="tmux kill-session -t "
+alias gcn="git clone"
 
 
 # ---- FZF -----

@@ -1,6 +1,7 @@
 lvim.keys.normal_mode["<Leader>h"] = ":set wrap<CR>"
 -- lvim.keys.normal_mode["<C-s>"] = ":w<CR>"
 lvim.keys.insert_mode["kj"] = "<Esc>"
+lvim.keys.insert_mode["<Esc>"] = "<Esc>"
 vim.api.nvim_set_keymap("x", "<C-k>", ":move '<-2<CR>gv-gv", { noremap = true, silent = true })
 vim.api.nvim_set_keymap("x", "<C-j>", ":move '>+1<CR>gv-gv", { noremap = true, silent = true }) -- lvim.keys.normal_mode["<S-x>"] = ":BufferKill<CR>"
 vim.api.nvim_set_keymap("n", "<S-A-x>", ":BufDel *<CR>", { noremap = true, silent = true })
