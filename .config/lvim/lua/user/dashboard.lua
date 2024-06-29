@@ -123,7 +123,7 @@ lvim.builtin.alpha.custom = {
       section.plugin_count,
       { type = "padding", val = 4 },
       section.buttons,
-      { type = "padding", val = 6 },
+      { type = "padding", val = 5 },
       section.footer,
     },
     opts = {
