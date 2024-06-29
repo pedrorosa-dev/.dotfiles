@@ -9,7 +9,7 @@ local header = {
   val = require("user.banners").dashboard(),
   opts = {
     position = "center",
-    hl = "Comment",
+    hl = "String",
   },
 }
 
@@ -85,15 +85,15 @@ end
 local buttons = {
   type = "group",
   val = {
+    button("p", " " .. lvim.icons.ui.Project .. " Projects", "<CMD>Telescope projects<CR>"),
     button("f", " " .. kind.cmp_kind.Folder .. " Explore", ":Telescope find_files<CR>"),
     button("n", " " .. kind.cmp_kind.File .. " New file", ":ene <BAR> startinsert <CR>"),
-    button("p", " " .. lvim.icons.ui.Project .. " Projects", "<CMD>Telescope projects<CR>"),
-    button("s", " " .. kind.icons.magic .. " Restore", ":lua require('persistence').load()<cr>"),
-    button(
-      "g",
-      " " .. kind.icons.git .. " Git Status",
-      ":lua require('lvim.core.terminal')._exec_toggle({cmd = 'lazygit', count = 1, direction = 'float'})<CR>"
-    ),
+    -- button("s", " " .. kind.icons.magic .. " Restore", ":lua require('persistence').load()<cr>"),
+    -- button(
+    --   "g",
+    --   " " .. kind.icons.git .. " Git Status",
+    --   ":lua require('lvim.core.terminal')._exec_toggle({cmd = 'lazygit', count = 1, direction = 'float'})<CR>"
+    -- ),
     button("r", " " .. kind.icons.clock .. " Recents", ":Telescope oldfiles<CR>"),
     button("c", " " .. kind.icons.settings .. " Config", ":e ~/.config/lvim/config.lua<CR>"),
     button("C", " " .. kind.cmp_kind.Color .. " Colorscheme Config", ":e ~/.config/lvim/lua/user/colorscheme.lua<CR>"),
@@ -121,9 +121,9 @@ lvim.builtin.alpha.custom = {
       section.heading,
       { type = "padding", val = 1 },
       section.plugin_count,
-      { type = "padding", val = 3 },
+      { type = "padding", val = 4 },
       section.buttons,
-      { type = "padding", val = 2 },
+      { type = "padding", val = 6 },
       section.footer,
     },
     opts = {
