@@ -17,13 +17,13 @@ lvim.builtin.lualine.options.theme = "auto"
 local colors = {
   darkgray = "#16161d",
   gray = "#727169",
-  innerbg = nil,      -- Deixe como nil para transparente
-  outerbg = nil,      --#16161D
-  normal = "#7e9cd8",
-  insert = "#98bb6c", --#727169 #98bb6c
-  visual = "#ffa066",
+  innerbg = nil,       -- Deixe como nil para transparente
+  outerbg = nil,       --#16161D
+  normal = "#64BAFF",  --  #7e9cd8 #64BAFF
+  insert = "#FF7081",  -- #98bb6c #FF7081 #727169
+  visual = "#B990F7",  -- #ffa066 #B990F7
   replace = "#e46876",
-  command = "#e6c384",
+  command = "#00882E", --  #e6c384 #00882E
 }
 
 lvim.builtin.lualine.options.theme = {

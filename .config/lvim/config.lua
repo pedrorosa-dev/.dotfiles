@@ -15,4 +15,4 @@ reload('user.harpoon')
 
 vim.opt.clipboard = "unnamedplus"
 -- lvim.format_on_save.enabled = true
-lvim.transparent_window = false
+lvim.transparent_window = true

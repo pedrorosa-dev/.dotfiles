@@ -5,22 +5,46 @@ require("nvim-highlight-colors").setup({})
 
 
 
-
 require('min-theme').setup({
-  -- (note: if your configuration sets vim.o.background the following option will do nothing!)
-  theme = 'dark',      -- String: 'dark' or 'light', determines the colorscheme used
-  transparent = false, -- Boolean: Sets the background to transparent
+  theme = 'dark',     -- String: 'dark' or 'light', determines the colorscheme used
+  transparent = true, -- Boolean: Sets the background to transparent
   italics = {
-    comments = true,   -- Boolean: Italicizes comments
-    keywords = true,   -- Boolean: Italicizes keywords
-    functions = true,  -- Boolean: Italicizes functions
-    strings = true,    -- Boolean: Italicizes strings
-    variables = true,  -- Boolean: Italicizes variables
+    comments = true,  -- Boolean: Italicizes comments
+    keywords = true,  -- Boolean: Italicizes keywords
+    functions = true, -- Boolean: Italicizes functions
+    strings = true,   -- Boolean: Italicizes strings
+    variables = true, -- Boolean: Italicizes variables
   },
-  overrides = {},      -- A dictionary of group names, can be a function returning a dictionary or a table.
+  overrides = {
+    Normal = { bg = "#181818" },                      -- Background color
+    Visual = { bg = "#606060" },                      -- Selection color (Visual mode)
+    CursorLine = { bg = nil },                        -- Background color for the current line #323232 #252525
+    LineNr = { fg = "#4B5263" },                      -- Gutter foreground #646464
+    NormalFloat = { fg = "#ABB2BF" },                 -- White
+    Search = { bg = "#606060", fg = "#ABB2BF" },      -- Highlight color for search matches
+    IncSearch = { bg = "#606060", fg = "#FF657E" },   -- Highlight color for incremental search matches
+    NvimTreeNormal = { bg = "#181818" },              -- Background color for nvim-tree headers
+    EndOfBuffer = { fg = "#181818", bg = "#181818" }, -- Configuração para o final do buffer
+    -- NonText = { fg = "#FFFFFF" },                   -- Non-text foreground
+    -- Comment = { fg = "#51506e", italic = true },
+    -- Constant = { fg = "#FF5555" },    -- Red
+    -- String = { fg = "#FFB86C" },      -- Orange
+    -- Identifier = { fg = "#94E59B" }, -- Yellow
+    -- Function = { fg = "#EEA177" },    -- Green
+    -- Statement = { fg = "#B0BEFF" },   -- Purple
+    -- Type = { fg = "#D1A4FD" },        -- Cyan
+    -- Special = { fg = "#FF92DF" },     -- Pink
+    -- PreProc = { fg = "#FFFFFF" },     -- Bright Red
+    -- Include = { fg = "#69FF94" },     -- Bright Green
+    -- Keyword = { fg = "#FFFFA5" },     -- Bright Yellow
+    -- Define = { fg = "#D6ACFF" },      -- Bright Blue
+    -- Macro = { fg = "#FF92DF" },       -- Bright Magenta
+    -- PreCondit = { fg = "#A4FFFF" },   -- Bright Cyan
+    -- Todo = { fg = "#FFFFFF" },    -- Bright White
+    -- Pmenu = { bg = "#222126" },       -- Menu background
+  },
 })
 
--- Rosa-nvim
 -- local dracula = require("dracula")
 -- dracula.setup({
 --   colors = {
@@ -30,10 +54,10 @@ require('min-theme').setup({
 --     comment = "#51506e",
 --     red = "#FF5555",
 --     orange = "#FFB86C",
---     yellow = "#94E59B", --  original #F1FA8C   #94E59B
---     green = "#EEA177",  --  original #50FA7B   #EEA177
---     purple = "#B0BEFF", --  original #BD93F9   #B0BEFF
---     cyan = "#D1A4FD",   -- original  #f95aa5    #D1A4FD
+--     yellow = "#F1FA8C", --  original #F1FA8C   #94E59B
+--     green = "#50FA7B",  --  original #50FA7B   #EEA177
+--     purple = "#BD93F9", --  original #BD93F9   #B0BEFF
+--     cyan = "#f95aa5",   -- original  #f95aa5    #D1A4FD
 --     pink = "#FF92DF",   -- original  #FF92DF   #B2BEFF
 --     bright_red = "#FFFFFF",
 --     bright_green = "#69FF94",
