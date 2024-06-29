@@ -17,44 +17,46 @@ lvim.builtin.lualine.options.theme = "auto"
 local colors = {
   darkgray = "#16161d",
   gray = "#727169",
-  innerbg = nil,       -- Deixe como nil para transparente
-  outerbg = nil,       --#16161D
-  normal = "#64BAFF",  --  #7e9cd8 #64BAFF
-  insert = "#FF7081",  -- #98bb6c #FF7081 #727169
-  visual = "#B990F7",  -- #ffa066 #B990F7
-  replace = "#e46876",
-  command = "#00882E", --  #e6c384 #00882E
+  branchfg = "#a0a0a0", -- #808080
+  branchbg = "#1A1A1A",
+  innerbg = nil,        -- Deixe como nil para transparente
+  outerbg = nil,        --#16161D
+  normal = "#64BAFF",   --  #7e9cd8 #64BAFF
+  insert = "#FF7081",   -- #98bb6c #FF7081 #727169
+  visual = "#B990F7",   -- #ffa066 #B990F7
+  replace = "#e46876",  -- #e46876
+  command = "#75bf63",  --  #e6c384 #00882E #75bf63
 }
 
 lvim.builtin.lualine.options.theme = {
   normal = {
     a = { fg = colors.darkgray, bg = colors.normal, gui = "bold" },
-    b = { fg = colors.gray, bg = colors.outerbg },
+    b = { fg = colors.branchfg, bg = colors.branchbg },
     c = { fg = colors.gray, bg = colors.innerbg },
   },
   insert = {
     a = { fg = colors.darkgray, bg = colors.insert, gui = "bold" },
-    b = { fg = colors.gray, bg = colors.outerbg },
+    b = { fg = colors.branchfg, bg = colors.branchbg },
     c = { fg = colors.gray, bg = colors.innerbg },
   },
   visual = {
     a = { fg = colors.darkgray, bg = colors.visual, gui = "bold" },
-    b = { fg = colors.gray, bg = colors.outerbg },
+    b = { fg = colors.branchfg, bg = colors.branchbg },
     c = { fg = colors.gray, bg = colors.innerbg },
   },
   replace = {
     a = { fg = colors.darkgray, bg = colors.replace, gui = "bold" },
-    b = { fg = colors.gray, bg = colors.outerbg },
+    b = { fg = colors.branchfg, bg = colors.branchbg },
     c = { fg = colors.gray, bg = colors.innerbg },
   },
   command = {
     a = { fg = colors.darkgray, bg = colors.command, gui = "bold" },
-    b = { fg = colors.gray, bg = colors.outerbg },
+    b = { fg = colors.branchfg, bg = colors.branchbg },
     c = { fg = colors.gray, bg = colors.innerbg },
   },
   inactive = {
     a = { fg = colors.gray, bg = colors.outerbg, gui = "bold" },
-    b = { fg = colors.gray, bg = colors.outerbg },
+    b = { fg = colors.branchfg, bg = colors.branchbg },
     c = { fg = colors.gray, bg = colors.innerbg },
   },
 }

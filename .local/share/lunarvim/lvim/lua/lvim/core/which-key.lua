@@ -117,7 +117,7 @@ M.config = function()
         function()
           require("lvim.core.telescope.custom-finders").find_project_files { previewer = false }
         end,
-        "Find File",
+        "Find File Git",
       },
       ["h"] = { "<cmd>nohlsearch<CR>", "No Highlight" },
       ["e"] = { "<cmd>NvimTreeToggle<CR>", " Explorer" },
