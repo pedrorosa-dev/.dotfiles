@@ -16,15 +16,21 @@ require('min-theme').setup({
     variables = true, -- Boolean: Italicizes variables
   },
   overrides = {
-    Normal = { bg = "#181818" },                      -- Background color
-    Visual = { bg = "#606060" },                      -- Selection color (Visual mode)
-    CursorLine = { bg = nil },                        -- Background color for the current line #323232 #252525
-    LineNr = { fg = "#4B5263" },                      -- Gutter foreground #646464
-    NormalFloat = { fg = "#ABB2BF" },                 -- White
-    Search = { bg = "#606060", fg = "#ABB2BF" },      -- Highlight color for search matches
-    IncSearch = { bg = "#606060", fg = "#FF657E" },   -- Highlight color for incremental search matches
-    NvimTreeNormal = { bg = "#181818" },              -- Background color for nvim-tree headers
-    EndOfBuffer = { fg = "#181818", bg = "#181818" }, -- Configuração para o final do buffer
+    Normal = { bg = "#202020" },                              -- Background color #181818
+    Visual = { bg = "#606060" },                              -- Selection color (Visual mode)
+    CursorLine = { bg = "#323232" },                          -- Background color for the current line #323232 #252525
+    LineNr = { fg = "#4B5263" },                              -- Gutter foreground #646464
+    NormalFloat = { fg = "#ABB2BF" },                         -- White
+    Search = { bg = "#606060", fg = "#ABB2BF" },              -- Highlight color for search matches
+    IncSearch = { bg = "#606060", fg = "#FF657E" },           -- Highlight color for incremental search matches
+    NvimTreeNormal = { bg = "#1A1A1A" },                      -- Background color for nvim-tree headers
+    NvimTreeEndOfBuffer = { fg = "#1A1A1A", bg = "#1A1A1A" }, -- Background para o final do buffer do nvim-tree
+    NvimTreeEmptyFolderName = { fg = "#666666" },             -- Cor do texto para nomes de pastas vazias #666666
+    NvimTreeOpenedFolderName = { fg = "#579FDC" },            -- Cor do texto para nomes de pastas abertas #AAAAAA
+    NvimTreeFolderName = { fg = "#AAAAAA" },                  -- Cor do texto para nomes de pastas #579FDC
+    WinBarNC = { fg = "#202020", bg = "#202020" },            -- Barra de janelas não ativa
+    BufferLineFill = { bg = "#1A1A1A" },                      -- Cor de fundo para o preenchimento no bufferline.nvim
+    EndOfBuffer = { fg = "#202020", bg = "#202020" },         -- Configuração para o final do buffer
     -- NonText = { fg = "#FFFFFF" },                   -- Non-text foreground
     -- Comment = { fg = "#51506e", italic = true },
     -- Constant = { fg = "#FF5555" },    -- Red
@@ -41,7 +47,7 @@ require('min-theme').setup({
     -- Macro = { fg = "#FF92DF" },       -- Bright Magenta
     -- PreCondit = { fg = "#A4FFFF" },   -- Bright Cyan
     -- Todo = { fg = "#FFFFFF" },    -- Bright White
-    -- Pmenu = { bg = "#222126" },       -- Menu background
+    -- Pmenu = { bg = "#1A1A1A" }, -- Menu background
   },
 })
 
