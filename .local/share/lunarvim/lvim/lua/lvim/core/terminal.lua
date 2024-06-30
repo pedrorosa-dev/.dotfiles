@@ -41,8 +41,8 @@ M.config = function()
     -- lvim.builtin.terminal.execs[#lvim.builtin.terminal.execs+1] = {"gdb", "tg", "GNU Debugger"}
     -- TODO: pls add mappings in which key and refactor this
     execs = {
-      { nil, "<C-x>", "Horizontal Terminal", "horizontal", 0.3 },
-      { nil, "<S-x>", "Vertical Terminal",   "vertical",   0.4 },
+      { nil, "<S-x>", "Horizontal Terminal", "horizontal", 0.4 },
+      { nil, "<C-x>", "Vertical Terminal",   "vertical",   0.4 },
       { nil, "<S-z>", "Float Terminal",      "float",      nil },
     },
   }
