@@ -208,7 +208,7 @@ final_space = true
   [[blocks.segments]]
     type = 'text'
     style = 'plain'
-    foreground = '#FFFFFF' # mesma cor do secondary_prompt
+    foreground = '#9B6BDF' # mesma cor do secondary_prompt
     # foreground_templates = [
     #   "{{if gt .Code 0}}red{{end}}",
     #   "{{if eq .Code 0}}magenta{{end}}",
@@ -228,4 +228,3 @@ final_space = true
   foreground = '#FFFFFF' # magenta
   background = 'transparent'
   template = '❯❯ '
-

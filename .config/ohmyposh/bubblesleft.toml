@@ -44,6 +44,7 @@ final_space = true
       cycle = ['#9B6BDF', '#a6a3a6', '#9B6BDF'] # 'cyan', 'magenta', 'blue'
 
 
+
   [[blocks.segments]]
     type = "git"
     style = "diamond"
@@ -70,7 +71,6 @@ final_space = true
 
       [properties.untracked_modes]
       "/Users/user/Projects/oh-my-posh/" = "no"
-
 
 
 
@@ -152,8 +152,12 @@ final_space = true
 
 
 [[blocks]]
-  type = "rprompt"
+  type = "prompt"
   alignment = "right"
+
+
+
+
 
    [[blocks.segments]]
     type = "status"
@@ -208,7 +212,7 @@ final_space = true
   [[blocks.segments]]
     type = 'text'
     style = 'plain'
-    foreground = '#FFFFFF' # mesma cor do secondary_prompt
+    foreground = '#9B6BDF' # mesma cor do secondary_prompt
     # foreground_templates = [
     #   "{{if gt .Code 0}}red{{end}}",
     #   "{{if eq .Code 0}}magenta{{end}}",
