@@ -8,7 +8,7 @@ ZSH_THEME="robbyrussell"
 # eval "$(oh-my-posh init zsh --config $(brew --prefix oh-my-posh)/themes/tokyonight_storm.omp.json)"
 
 # CONFIG PESSOAL DO ohmyposh 
-# bubblesboth.toml, zen.toml, bubblesleft.toml, warpzen.toml, warpbubblesleft.toml, warpbubblesboth.toml
+# bubblesboth.toml, zen.toml, bubblesleft.toml
 eval "$(oh-my-posh init zsh --config $HOME/.config/ohmyposh/bubblesboth.toml)"
 
 
