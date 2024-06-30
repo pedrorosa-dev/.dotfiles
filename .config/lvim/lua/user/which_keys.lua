@@ -82,3 +82,11 @@ lvim.builtin.which_key.mappings[":"] = {
   name = "+Renamer",
   r = { "<cmd>lua require('renamer').rename()<cr>", "Rename" }
 }
+
+
+-- which key set wrap
+
+lvim.builtin.which_key.mappings["y"] = {
+  name = "+Wrap",
+  w = { "<cmd>set wrap<cr>", "Wrap" }
+}
