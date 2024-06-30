@@ -17,22 +17,22 @@ console_title_template = '{{ .Shell }} in {{ .Folder }}'
   [[blocks.segments]]
     type = 'path'
     background = 'transparent'
-    foreground = 'blue'
+    foreground = '#FFFFFF' # blue
 
     [blocks.segments.properties]
       style = 'powerlevel'
       folder_icon = ''
       home_icon = ' '
       max_width = 20
-      cycle = ['cyan', 'magenta', 'blue']
+      cycle = ['cyan', 'blue', '#9B6BDF'] # cyan, magenta, blue
 
   [[blocks.segments]]
     type = "git"
     style = "powerline"
-    foreground = "green"
-    background = "transparent"
+    foreground = "#6C7E5E" # green
+    background = "transparent" # transparent
     foreground_templates = [
-      "{{ if or (.Working.Changed) (.Staging.Changed) }}#FFEB3B{{ end }}",
+      "{{ if or (.Working.Changed) (.Staging.Changed) }}#B4FB73{{ end }}", # #FFEB3B
       "{{ if and (gt .Ahead 0) (gt .Behind 0) }}#FFCC80{{ end }}",
       "{{ if gt .Ahead 0 }}#B388FF{{ end }}",
       "{{ if gt .Behind 0 }}#B388FB{{ end }}"
@@ -132,7 +132,7 @@ console_title_template = '{{ .Shell }} in {{ .Folder }}'
 
    [[blocks.segments]]
     type = "status"
-    foreground = "#00897b"
+    foreground = "#606060" # #00897b #9B6BDF
     foreground_templates = [ "{{ if gt .Code 0 }}#e91e63{{ end }}" ]
     template = " " ## 󰀦  
 
@@ -149,6 +149,8 @@ console_title_template = '{{ .Shell }} in {{ .Folder }}'
     [blocks.segments.properties]
       threshold = 5000
 
+
+
 [[blocks]]
   type = 'prompt'
   alignment = 'left'
@@ -157,10 +159,11 @@ console_title_template = '{{ .Shell }} in {{ .Folder }}'
   [[blocks.segments]]
     type = 'text'
     style = 'plain'
-    foreground_templates = [
-      "{{if gt .Code 0}}red{{end}}",
-      "{{if eq .Code 0}}magenta{{end}}",
-    ]
+    foreground = '#9B6BDF' # mesma cor do secondary_prompt
+    # foreground_templates = [
+    #   "{{if gt .Code 0}}red{{end}}",
+    #   "{{if eq .Code 0}}magenta{{end}}",
+    # ]   
     background = 'transparent'
     template = '❯'
 
@@ -173,6 +176,7 @@ console_title_template = '{{ .Shell }} in {{ .Folder }}'
   template = '❯ '
 
 [secondary_prompt]
-  foreground = 'magenta'
+  foreground = '#9B6BDF' # magenta
   background = 'transparent'
   template = '❯❯ '
+

@@ -11,7 +11,7 @@ final_space = true
     type = "os"
     template = "{{.Icon}}"
     background = "#111111"
-    foreground = "#9B6BDF"
+    foreground = "#FFFFFF" # #9B6BDF
     leading_diamond = "\ue0b6"
     trailing_diamond = "\ue0b4 "
     style = "diamond"
@@ -21,8 +21,8 @@ final_space = true
 
   # [[blocks.segments]]
   # type = "session"
-  # background = "#111111"
-  # foreground = "#9B6BDF"
+  # background = "#181818"
+  # foreground = "#FFFFFF"
   # leading_diamond = "\ue0b6"
   # trailing_diamond = "\ue0b4 "
   # style = "diamond"
@@ -30,8 +30,8 @@ final_space = true
 
   [[blocks.segments]]
   type = "path"
-  background = "#111111"
-  foreground = "#3EC669"
+  background = "#181818" # #181818 #111111
+  foreground = "#FFFFFF" # #3EC669 #9B6BDF
   leading_diamond = "\ue0b6"
   trailing_diamond = "\ue0b4"
   style = "diamond"
@@ -41,18 +41,18 @@ final_space = true
       folder_icon = ''
       home_icon = ' '
       max_width = 20
-      cycle = ['cyan', 'magenta', 'blue']
+      cycle = ['#9B6BDF', '#a6a3a6', '#9B6BDF'] # 'cyan', 'magenta', 'blue'
 
 
   [[blocks.segments]]
     type = "git"
     style = "diamond"
-    foreground = "#43CCEA"
-    background = "#292929"
+    foreground = "#FFFFFF" # #43CCEA #9B6BDF
+    background = "#111111" # #111111 #181818
     leading_diamond = " \ue0b6"
     trailing_diamond = "\ue0b4"
     foreground_templates = [
-      "{{ if or (.Working.Changed) (.Staging.Changed) }}#FFEB3B{{ end }}",
+      "{{ if or (.Working.Changed) (.Staging.Changed) }}#FFFFFF{{ end }}", # #FFEB3B
       "{{ if and (gt .Ahead 0) (gt .Behind 0) }}#FFCC80{{ end }}",
       "{{ if gt .Ahead 0 }}#B388FF{{ end }}",
       "{{ if gt .Behind 0 }}#B388FB{{ end }}"
@@ -153,12 +153,12 @@ final_space = true
 
 [[blocks]]
   type = "rprompt"
-  alignment = "left"
+  alignment = "right"
 
    [[blocks.segments]]
     type = "status"
     background = "transparent"
-    foreground = "#9B6BDF"
+    foreground = "#606060" # #9B6BDF
     leading_diamond = "\ue0b6"
     trailing_diamond = "\ue0b4 "
     foreground_templates = [ "{{ if gt .Code 0 }}#e91e63{{ end }}" ]
@@ -198,6 +198,8 @@ final_space = true
     [blocks.segments.properties]
       threshold = 5000
 
+
+
 [[blocks]]
   type = 'prompt'
   alignment = 'left'
@@ -206,10 +208,11 @@ final_space = true
   [[blocks.segments]]
     type = 'text'
     style = 'plain'
-    foreground_templates = [
-      "{{if gt .Code 0}}red{{end}}",
-      "{{if eq .Code 0}}magenta{{end}}",
-    ]
+    foreground = '#FFFFFF' # mesma cor do secondary_prompt
+    # foreground_templates = [
+    #   "{{if gt .Code 0}}red{{end}}",
+    #   "{{if eq .Code 0}}magenta{{end}}",
+    # ]   
     background = 'transparent'
     template = '❯'
 
@@ -222,6 +225,7 @@ final_space = true
   template = '❯ '
 
 [secondary_prompt]
-  foreground = 'magenta'
+  foreground = '#FFFFFF' # magenta
   background = 'transparent'
   template = '❯❯ '
+
