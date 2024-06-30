@@ -64,21 +64,14 @@ lvim.builtin.which_key.mappings["z"] = {
 
 
 
--- lvim.builtin.which_key.mappings[":"] = {
---   name = "+Fine-Cmdline",
---   f = { "<cmd>FineCmdline<cr>", "Fine-Cmdline" }
--- }
-
-
-
-lvim.builtin.which_key.mappings["r"] = {
+lvim.builtin.which_key.mappings[":"] = {
   name = "+Telescope Browser",
   f = { "<cmd>Telescope file_browser<cr>", "File Browser" }
 }
 
 
 
-lvim.builtin.which_key.mappings[":"] = {
+lvim.builtin.which_key.mappings["r"] = {
   name = "+Renamer",
   r = { "<cmd>lua require('renamer').rename()<cr>", "Rename" }
 }
