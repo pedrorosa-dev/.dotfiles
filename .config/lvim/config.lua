@@ -12,6 +12,7 @@ reload('user.notify')
 reload('user.renamer')
 reload('user.telescope_browser')
 reload('user.harpoon')
+require("mason-nvim-dap").setup()
 
 vim.opt.clipboard = "unnamedplus"
 -- lvim.format_on_save.enabled = true
