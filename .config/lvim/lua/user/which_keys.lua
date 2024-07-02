@@ -2,8 +2,6 @@ lvim.builtin.which_key.mappings["t"] = {
   name = "+Todo",
   j = { "<cmd>TodoTrouble<cr>", "Trouble" },
   t = { "<cmd>TodoTelescope<cr>", "Telescope" },
-  n = { "<cmd>TodoNext<cr>", "Next" },
-  p = { "<cmd>TodoPrev<cr>", "Prev" },
   l = { "<cmd>TodoLocList<cr>", "LocList" },
   q = { "<cmd>TodoQuickFix<cr>", "QuickFix" },
 }
