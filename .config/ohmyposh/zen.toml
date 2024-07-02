@@ -24,7 +24,7 @@ console_title_template = '{{ .Shell }} in {{ .Folder }}'
       folder_icon = ''
       home_icon = ' '
       max_width = 20
-      cycle = ['cyan', 'blue', '#9B6BDF'] # cyan, magenta, blue
+      cycle = ['cyan', '#a6a3a6', '#9B6BDF'] # cyan, magenta, blue
 
   [[blocks.segments]]
     type = "git"
@@ -32,7 +32,7 @@ console_title_template = '{{ .Shell }} in {{ .Folder }}'
     foreground = "#6C7E5E" # green
     background = "transparent" # transparent
     foreground_templates = [
-      "{{ if or (.Working.Changed) (.Staging.Changed) }}#B4FB73{{ end }}", # #FFEB3B
+      "{{ if or (.Working.Changed) (.Staging.Changed) }}#FFFFFF{{ end }}", # #FFEB3B
       "{{ if and (gt .Ahead 0) (gt .Behind 0) }}#FFCC80{{ end }}",
       "{{ if gt .Ahead 0 }}#B388FF{{ end }}",
       "{{ if gt .Behind 0 }}#B388FB{{ end }}"

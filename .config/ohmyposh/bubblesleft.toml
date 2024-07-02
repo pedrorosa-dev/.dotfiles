@@ -73,6 +73,9 @@ final_space = true
       "/Users/user/Projects/oh-my-posh/" = "no"
 
 
+[[blocks]]
+  type = "prompt"
+  alignment = "right"
 
   [[blocks.segments]]
   type = "python"
@@ -151,9 +154,6 @@ final_space = true
   template = "  {{ .Major }}.{{ .Minor }} "
 
 
-[[blocks]]
-  type = "prompt"
-  alignment = "right"
 
 
 
