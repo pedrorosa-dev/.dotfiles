@@ -14,7 +14,6 @@ lvim.plugins = {
   { "filipdutescu/renamer.nvim" },
   { "VonHeikemen/fine-cmdline.nvim" },
   { "MunifTanjim/nui.nvim" },
-  -- { "nvim-neo-tree/neo-tree.nvim" },
   { "folke/twilight.nvim" },
   { "AndreM222/copilot-lualine" },
   { "ThePrimeagen/harpoon" },

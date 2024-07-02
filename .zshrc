@@ -3,6 +3,8 @@ export PATH="/opt/homebrew/opt/ripgrep/bin:$PATH"
 export PATH="$PATH:/Applications/Visual Studio Code.app/Contents/Resources/app/bin"
 ZSH_THEME="robbyrussell"
 
+
+
 ## oh my posh
 # alguns temas - tokyonight_storm, catppuccin_mocha
 # eval "$(oh-my-posh init zsh --config $(brew --prefix oh-my-posh)/themes/tokyonight_storm.omp.json)"

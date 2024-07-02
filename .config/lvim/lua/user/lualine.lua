@@ -24,7 +24,7 @@ local colors = {
   normal = "#64BAFF",   --  #7e9cd8 #64BAFF
   insert = "#FF7081",   -- #98bb6c #FF7081 #727169
   visual = "#B990F7",   -- #ffa066 #B990F7
-  replace = "#e46876",  -- #e46876
+  replace = "#ffa066",  -- #e46876
   command = "#75bf63",  --  #e6c384 #00882E #75bf63
 }
 

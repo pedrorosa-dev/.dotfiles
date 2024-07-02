@@ -12,7 +12,6 @@ reload('user.notify')
 reload('user.renamer')
 reload('user.telescope_browser')
 reload('user.harpoon')
--- reload('user.neotree')
 
 vim.opt.clipboard = "unnamedplus"
 -- lvim.format_on_save.enabled = true

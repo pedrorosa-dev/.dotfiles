@@ -12,6 +12,8 @@ lvim.keys.normal_mode["<S-h>"] = ":BufferLineCyclePrev<CR>"
 lvim.keys.normal_mode["<S-l>"] = ":BufferLineCycleNext<CR>"
 
 lvim.keys.normal_mode["<S-q>"] = ":vsplit<CR>"
+lvim.keys.normal_mode["<S-n>"] = ":split<CR>"
+
 
 lvim.builtin.bufferline.active = true
 lvim.builtin.bufferline.animation = true

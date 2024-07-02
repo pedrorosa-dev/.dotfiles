@@ -1,14 +1,6 @@
-lvim.builtin.which_key.mappings["j"] = {
-  name = "+Trouble",
-  t = { "<cmd>Trouble<cr>", "Trouble" },
-  l = { "<cmd>TroubleToggle loclist<cr>", "Loclist" },
-  q = { "<cmd>TroubleToggle quickfix<cr>", "Quickfix" },
-  r = { "<cmd>TroubleToggle lsp_references<cr>", "LSP References" },
-}
-
 lvim.builtin.which_key.mappings["t"] = {
   name = "+Todo",
-  T = { "<cmd>TodoTrouble<cr>", "Trouble" },
+  j = { "<cmd>TodoTrouble<cr>", "Trouble" },
   t = { "<cmd>TodoTelescope<cr>", "Telescope" },
   n = { "<cmd>TodoNext<cr>", "Next" },
   p = { "<cmd>TodoPrev<cr>", "Prev" },
@@ -44,7 +36,7 @@ lvim.builtin.which_key.mappings["C"] = {
 
 
 
-lvim.builtin.which_key.mappings["P"] = {
+lvim.builtin.which_key.mappings["j"] = {
   name = "+Twilight",
   e = { "<cmd>TwilightEnable<cr>", "Twilight Enable" },
   d = { "<cmd>TwilightDisable<cr>", "Twilight Disable" },
