@@ -36,7 +36,7 @@ lvim.builtin.which_key.mappings["C"] = {
 
 
 
-lvim.builtin.which_key.mappings["j"] = {
+lvim.builtin.which_key.mappings["J"] = {
   name = "+Twilight",
   e = { "<cmd>TwilightEnable<cr>", "Twilight Enable" },
   d = { "<cmd>TwilightDisable<cr>", "Twilight Disable" },
@@ -69,9 +69,18 @@ lvim.builtin.which_key.mappings["r"] = {
 }
 
 
--- which key set wrap
-
 lvim.builtin.which_key.mappings["y"] = {
   name = "+Wrap",
   w = { "<cmd>set wrap<cr>", "Wrap" }
+}
+
+-- which key Codi
+
+lvim.builtin.which_key.mappings["j"] = {
+  name = "+Codi",
+  c = { "<cmd>Codi<cr>", "Codi" },
+  e = { "<cmd>CodiExpand<cr>", "Codi Expand" },
+  u = { "<cmd>CodiUpdate<cr>", "Codi Update" },
+  s = { "<cmd>CodiSelect<cr>", "Codi Select" },
+  n = { "<cmd>CodiNew<cr>", "Codi New" }
 }

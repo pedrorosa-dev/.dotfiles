@@ -24,6 +24,7 @@ lvim.plugins = {
   --
   { "mfussenegger/nvim-dap" },
   { "jay-babu/mason-nvim-dap.nvim" },
+  { "metakirby5/codi.vim" },
 
   --------------------------------------------
   --- *=================*
