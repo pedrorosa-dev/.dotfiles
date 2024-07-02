@@ -1,6 +1,5 @@
 lvim.plugins = {
   { "lunarvim/colorschemes" },
-  { "folke/trouble.nvim" },
   { "jose-elias-alvarez/typescript.nvim" },
   { "mattn/emmet-vim" },
   { "AndrewRadev/tagalong.vim" },
@@ -15,8 +14,16 @@ lvim.plugins = {
   { "VonHeikemen/fine-cmdline.nvim" },
   { "MunifTanjim/nui.nvim" },
   { "folke/twilight.nvim" },
-  { "AndreM222/copilot-lualine" },
   { "ThePrimeagen/harpoon" },
+  { "folke/trouble.nvim" },
+
+  --------------------------------------------
+  --- *=================*
+  --- | PLUGINS DE IA |
+  --- *=================*
+  --
+  -- { 'ExaFunction/codeium.vim' },
+  { "AndreM222/copilot-lualine" },
   --------------------------------------------
   -- *=================*
   -- | PLUGINS DE TEMA |
@@ -58,7 +65,6 @@ lvim.plugins = {
   { "iamcco/markdown-preview.nvim" },
   { "folke/noice.nvim" },
   { 'rcarriga/nvim-notify' },
-  -- { 'ExaFunction/codeium.vim' },
   { "nvim-telescope/telescope.nvim" },
   { "mg979/vim-visual-multi" },
   { "tpope/vim-commentary" },
