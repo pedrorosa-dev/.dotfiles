@@ -16,6 +16,14 @@ lvim.plugins = {
   { "folke/twilight.nvim" },
   { "ThePrimeagen/harpoon" },
   { "folke/trouble.nvim" },
+  {
+    "nvim-treesitter/nvim-treesitter-context",
+    config = function()
+      require('treesitter-context').setup {
+        enable = false,
+      }
+    end
+  },
 
   --------------------------------------------
   --- *=================*
@@ -67,7 +75,6 @@ lvim.plugins = {
   { "neovim/nvim-lspconfig" },
   { "jose-elias-alvarez/null-ls.nvim" },
   { "nvim-tree/nvim-web-devicons" },
-  { "tpope/vim-fugitive" },
   { "brenoprata10/nvim-highlight-colors" },
   { "akinsho/bufferline.nvim" },
   { "catppuccin/nvim" },

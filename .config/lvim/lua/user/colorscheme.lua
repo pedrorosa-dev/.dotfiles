@@ -17,7 +17,7 @@ require('min-theme').setup({
   },
   overrides = {
     Normal = { bg = "#202020" },                              -- Background color #181818
-    Visual = { bg = "#606060" },                              -- Selection color (Visual mode)
+    Visual = { bg = "#606060" },                              -- #606060  #264F78                          -- Selection color (Visual mode)
     CursorLine = { bg = "#323232" },                          -- Background color for the current line #323232 #252525
     LineNr = { fg = "#4B5263" },                              -- Gutter foreground #646464
     NormalFloat = { fg = "#ABB2BF" },                         -- White

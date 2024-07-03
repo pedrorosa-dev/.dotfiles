@@ -20,12 +20,6 @@ lvim.builtin.which_key.mappings["n"] = {
 }
 
 
-lvim.builtin.which_key.mappings["C"] = {
-  name = "+Copilot",
-  c = { "<cmd>Copilot<cr>", "Copilot" },
-  s = { "<cmd>CopilotStop<cr>", "Copilot Stop" },
-  p = { "<cmd>CopilotPanel<cr>", "Copilot Panel" },
-}
 
 -- lvim.builtin.which_key.mappings["o"] = {
 --   name = "+Terminal",
@@ -67,12 +61,11 @@ lvim.builtin.which_key.mappings["r"] = {
 }
 
 
-lvim.builtin.which_key.mappings["y"] = {
+lvim.builtin.which_key.mappings["W"] = {
   name = "+Wrap",
   w = { "<cmd>set wrap<cr>", "Wrap" }
 }
 
--- which key Codi
 
 lvim.builtin.which_key.mappings["j"] = {
   name = "+Codi",
@@ -81,4 +74,10 @@ lvim.builtin.which_key.mappings["j"] = {
   u = { "<cmd>CodiUpdate<cr>", "Codi Update" },
   s = { "<cmd>CodiSelect<cr>", "Codi Select" },
   n = { "<cmd>CodiNew<cr>", "Codi New" }
+}
+
+
+lvim.builtin.which_key.mappings["S"] = {
+  name = "+Sticky Scroll",
+  e = { "<cmd>TSContextToggle<cr>", "Sticky Scroll Toggle" }
 }
