@@ -29,7 +29,7 @@ console_title_template = '{{ .Shell }} in {{ .Folder }}'
   [[blocks.segments]]
     type = "git"
     style = "powerline"
-    foreground = "#6C7E5E" # green
+    foreground = "#FFFFFF" # green #6C7E5E
     background = "transparent" # transparent
     foreground_templates = [
       "{{ if or (.Working.Changed) (.Staging.Changed) }}#FFFFFF{{ end }}", # #FFEB3B
