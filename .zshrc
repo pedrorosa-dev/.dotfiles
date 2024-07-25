@@ -11,7 +11,7 @@ ZSH_THEME="robbyrussell"
 
 # CONFIG PESSOAL DO ohmyposh 
 # bubblesboth.toml, zen.toml, bubblesleft.toml
-eval "$(oh-my-posh init zsh --config $HOME/.config/ohmyposh/zen.toml)"
+eval "$(oh-my-posh init zsh --config $HOME/.config/ohmyposh/bubblesboth.toml)"
 
 
 
@@ -131,3 +131,11 @@ export SDKMAN_DIR="$HOME/.sdkman"
 [[ -s "$HOME/.sdkman/bin/sdkman-init.sh" ]] && source "$HOME/.sdkman/bin/sdkman-init.sh"
 
 
+
+
+# Herd injected PHP 8.3 configuration.
+export HERD_PHP_83_INI_SCAN_DIR="/Users/pedrorosa-dev/Library/Application Support/Herd/config/php/83/"
+
+
+# Herd injected PHP binary.
+export PATH="/Users/pedrorosa-dev/Library/Application Support/Herd/bin/":$PATH

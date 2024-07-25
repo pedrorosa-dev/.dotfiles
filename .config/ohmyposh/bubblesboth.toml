@@ -120,7 +120,7 @@ final_space = true
   [[blocks.segments]]
   type = "php"
   background = "#181818"
-  foreground = "#ffffff"
+  foreground = "#A872C9"
   leading_diamond = " \ue0b6"
   trailing_diamond = "\ue0b4"
   style = "diamond"

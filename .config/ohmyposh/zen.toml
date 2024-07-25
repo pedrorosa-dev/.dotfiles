@@ -77,7 +77,7 @@ console_title_template = '{{ .Shell }} in {{ .Folder }}'
   [[blocks.segments]]
     type = "php"
     style = "powerline"
-    # foreground = "#ffffff"
+    foreground = "#A872C9"
     # background = "#4063D8"
     foreground = "#4063D8"
     template = "  {{ .Major }}.{{ .Minor }} "

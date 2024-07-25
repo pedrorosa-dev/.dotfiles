@@ -142,6 +142,7 @@ lvim.plugins = {
         python = { "pylint" },
         ruby = { "rubocop" },
         markdown = { "alex" },
+        php = { "phpcs" },
       }
       local lint_augroup = vim.api.nvim_create_augroup("lint", { clear = true })
 
@@ -203,6 +204,7 @@ lvim.plugins = {
           python = { "isort", "autopep8" },
           ruby = { "rubocop" },
           lua = { "stylua" },
+          php = { "php_cs_fixer", "phpcbf" },
         },
         format_on_save = {
           lsp_fallback = true,
