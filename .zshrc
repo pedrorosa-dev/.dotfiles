@@ -1,6 +1,5 @@
 export ZSH="$HOME/.oh-my-zsh"
 export PATH="/opt/homebrew/opt/ripgrep/bin:$PATH"
-export PATH="$PATH:/Applications/Visual Studio Code.app/Contents/Resources/app/bin"
 ZSH_THEME="robbyrussell"
 
 
@@ -11,7 +10,7 @@ ZSH_THEME="robbyrussell"
 
 # CONFIG PESSOAL DO ohmyposh 
 # bubblesboth.toml, zen.toml, bubblesleft.toml
-eval "$(oh-my-posh init zsh --config $HOME/.config/ohmyposh/bubblesboth.toml)"
+eval "$(oh-my-posh init zsh --config $HOME/.config/ohmyposh/zen.toml)"
 
 
 
@@ -53,6 +52,7 @@ fi
 
 #ALIAS
 alias P="~/Projects"
+alias PH="/Applications/XAMPP/xamppfiles/htdocs/projects"
 alias rn="lvim"
 alias cls='clear'
 alias live='live-server'
