@@ -1,5 +1,6 @@
 export ZSH="$HOME/.oh-my-zsh"
 export PATH="/opt/homebrew/opt/ripgrep/bin:$PATH"
+export PATH="/opt/homebrew/opt/postgresql@16/bin:$PATH"
 ZSH_THEME="robbyrussell"
 
 
@@ -42,17 +43,18 @@ bindkey '^[[A' history-search-backward
 bindkey '^[[B' history-search-forward
 
 # iniciar o tmux
-if command -v tmux &> /dev/null; then
-    if [ -z "$TMUX" ]; then
-        # Tenta anexar a uma sessão existente, senão cria uma nova no diretório home
-        tmux attach || (cd ~ && tmux new-session -s home)
-    fi
-fi
+# if command -v tmux &> /dev/null; then
+#     if [ -z "$TMUX" ]; then
+#         # Tenta anexar a uma sessão existente, senão cria uma nova no diretório home
+#         tmux attach || (cd ~ && tmux new-session -s home)
+#     fi
+# fi
 
 
 #ALIAS
 alias P="~/Projects"
 alias PH="/Applications/XAMPP/xamppfiles/htdocs/projects"
+alias psqlu='psql -U postgres'
 alias rn="lvim"
 alias cls='clear'
 alias live='live-server'
@@ -131,7 +133,7 @@ export SDKMAN_DIR="$HOME/.sdkman"
 [[ -s "$HOME/.sdkman/bin/sdkman-init.sh" ]] && source "$HOME/.sdkman/bin/sdkman-init.sh"
 
 
-
+# php
 
 # Herd injected PHP 8.3 configuration.
 export HERD_PHP_83_INI_SCAN_DIR="/Users/pedrorosa-dev/Library/Application Support/Herd/config/php/83/"
@@ -139,3 +141,5 @@ export HERD_PHP_83_INI_SCAN_DIR="/Users/pedrorosa-dev/Library/Application Suppor
 
 # Herd injected PHP binary.
 export PATH="/Users/pedrorosa-dev/Library/Application Support/Herd/bin/":$PATH
+
+
