@@ -15,6 +15,8 @@ lvim.keys.normal_mode["<S-q>"] = ":vsplit<CR>"
 lvim.keys.normal_mode["<S-n>"] = ":split<CR>"
 
 
+vim.g.user_emmet_leader_key = '<C-y>'
+
 lvim.builtin.bufferline.active = true
 lvim.builtin.bufferline.animation = true
 lvim.builtin.bufferline.icons = true
