@@ -135,10 +135,10 @@ lvim.plugins = {
       local lint = require("lint")
 
       lint.linters_by_ft = {
-        javascript = { "eslint", "biome" },
-        typescript = { "eslint", "biome" },
-        javascriptreact = { "eslint", "biome" },
-        typescriptreact = { "eslint", "biome" },
+        javascript = { "eslint" },
+        typescript = { "eslint" },
+        javascriptreact = { "eslint" },
+        typescriptreact = { "eslint" },
         python = { "pylint" },
         ruby = { "rubocop" },
         markdown = { "alex" },
