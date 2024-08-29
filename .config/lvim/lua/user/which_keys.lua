@@ -81,3 +81,9 @@ lvim.builtin.which_key.mappings["S"] = {
   name = "+Sticky Scroll",
   e = { "<cmd>TSContextToggle<cr>", "Sticky Scroll Toggle" }
 }
+
+
+lvim.builtin.which_key.mappings["G"] = {
+  name = "+AutoSave",
+  e = { "<cmd>ASToggle<cr>", "Enable/Disable" }
+}
