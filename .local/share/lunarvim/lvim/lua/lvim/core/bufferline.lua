@@ -28,7 +28,8 @@ local function custom_filter(buf, buf_nums)
     return is_ft(b, "log")
   end, buf_nums or {})
   if vim.tbl_isempty(logs) then
-    return true
+    -- NOTE:  retornar true ele exibe varias abas e se retornar false ele exibe apenas uma aba por vez
+    return false
   end
   local tab_num = vim.fn.tabpagenr()
   local last_tab = vim.fn.tabpagenr "$"
@@ -64,17 +65,17 @@ M.config = function()
       auto_toggle_bufferline = true,
       move_wraps_at_ends = false,
       groups = { items = {}, options = { toggle_hidden_on_enter = true } },
-      mode = "buffers", -- set to "tabs" to only show tabpages instead
-      numbers = "none", -- can be "none" | "ordinal" | "buffer_id" | "both" | function
+      mode = "buffers",               -- set to "tabs" to only show tabpages instead
+      numbers = "none",               -- can be "none" | "ordinal" | "buffer_id" | "both" | function
       close_command = function(bufnr) -- can be a string | function, see "Mouse actions"
         M.buf_kill("bd", bufnr, false)
       end,
       right_mouse_command = "vert sbuffer %d", -- can be a string | function, see "Mouse actions"
-      left_mouse_command = "buffer %d", -- can be a string | function, see "Mouse actions"
-      middle_mouse_command = nil, -- can be a string | function, see "Mouse actions"
+      left_mouse_command = "buffer %d",        -- can be a string | function, see "Mouse actions"
+      middle_mouse_command = nil,              -- can be a string | function, see "Mouse actions"
       indicator = {
-        icon = lvim.icons.ui.BoldLineLeft, -- this should be omitted if indicator style is not 'icon'
-        style = "icon", -- can also be 'underline'|'none',
+        icon = lvim.icons.ui.BoldLineLeft,     -- this should be omitted if indicator style is not 'icon'
+        style = "icon",                        -- can also be 'underline'|'none',
       },
       buffer_close_icon = lvim.icons.ui.Close,
       modified_icon = lvim.icons.ui.Circle,
@@ -93,7 +94,7 @@ M.config = function()
       end,
       max_name_length = 18,
       max_prefix_length = 15, -- prefix used when a buffer is de-duplicated
-      truncate_names = true, -- whether or not tab names should be truncated
+      truncate_names = true,  -- whether or not tab names should be truncated
       tab_size = 18,
       diagnostics = "nvim_lsp",
       diagnostics_update_in_insert = false,
@@ -131,7 +132,7 @@ M.config = function()
           padding = 1,
         },
       },
-      color_icons = true, -- whether or not to add the filetype icon highlights
+      color_icons = true,                 -- whether or not to add the filetype icon highlights
       show_buffer_icons = lvim.use_icons, -- disable filetype icons for buffers
       show_buffer_close_icons = lvim.use_icons,
       show_close_icon = false,
@@ -205,7 +206,8 @@ function M.buf_kill(kill_command, bufnr, force)
         end)
       elseif choice == 2 then
         force = true
-      else return
+      else
+        return
       end
     elseif api.nvim_buf_get_option(bufnr, "buftype") == "terminal" then
       choice = fn.confirm(fmt([[Close "%s"?]], bufname), "&Yes\n&No\n&Cancel")

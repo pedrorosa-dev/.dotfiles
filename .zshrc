@@ -5,7 +5,6 @@ export PATH="$PATH:/Users/pedrorosa-dev/.yarn/bin"
 export PATH="$PATH:/Users/pedrorosa-dev/Library/pnpm/global/5/node_modules"
 export PATH="$PATH:/Users/pedrorosa-dev/node_modules/.bin"
 
-
 ZSH_THEME="agnoster"
 # ZSH_THEME="robbyrussell"
 
@@ -66,7 +65,7 @@ alias cls='clear'
 alias live='live-server'
 alias neo='neofetch'
 alias lg='lazygit'
-alias img="viu"
+alias img="imgcat"
 alias tls="tmux list-sessions"
 alias taa="tmux attach-session -t "
 alias tnn="tmux new-session -s "
