@@ -1,6 +1,11 @@
 export ZSH="$HOME/.oh-my-zsh"
 export PATH="/opt/homebrew/opt/ripgrep/bin:$PATH"
 export PATH="/opt/homebrew/opt/postgresql@16/bin:$PATH"
+export PATH="$PATH:/Users/pedrorosa-dev/.yarn/bin"
+export PATH="$PATH:/Users/pedrorosa-dev/Library/pnpm/global/5/node_modules"
+export PATH="$PATH:/Users/pedrorosa-dev/node_modules/.bin"
+
+
 ZSH_THEME="agnoster"
 # ZSH_THEME="robbyrussell"
 
@@ -12,7 +17,7 @@ ZSH_THEME="agnoster"
 
 # CONFIG PESSOAL DO ohmyposh 
 # bubblesboth.toml, zen.toml, bubblesleft.toml
-eval "$(oh-my-posh init zsh --config $HOME/.config/ohmyposh/bubblesboth.toml)"
+eval "$(oh-my-posh init zsh --config $HOME/.config/ohmyposh/zen.toml)"
 
 
 
