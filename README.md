@@ -36,6 +36,22 @@ Welcome to my personal dotfiles repository, where I manage all my configuration 
     git clone https://github.com/pedrorosa-dev/.dotfiles.git
     ```
 
+2.5 **Remove all files**
+
+```bash
+
+rm -rf ~/.config/lvim \
+       ~/.local/share/lunarvim/lvim/lua/lvim/core \
+       ~/.zshrc \
+       ~/.gitconfig \
+       ~/.tmux.conf \
+       ~/.config/neofetch/config.conf \
+       ~/.config/yabai \
+       ~/.config/skhd \
+       ~/.config/ohmyposh
+
+```
+
 3. **Navigate to the .dotfiles directory**:
     ```bash
     cd .dotfiles
