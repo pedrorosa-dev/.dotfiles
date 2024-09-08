@@ -1,4 +1,4 @@
-lvim.colorscheme = "mellow"
+lvim.colorscheme = "vscode_modern"
 
 
 require("nvim-highlight-colors").setup({})

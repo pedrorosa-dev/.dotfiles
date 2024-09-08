@@ -87,18 +87,18 @@ local buttons = {
    val = {
       button("p", " " .. lvim.icons.ui.Project .. " Projects", "<CMD>Telescope projects<CR>"),
       button("f", " " .. kind.cmp_kind.Folder .. " Explore", ":Telescope find_files<CR>"),
-      button("n", " " .. kind.cmp_kind.File .. " New file", ":ene <BAR> startinsert <CR>"),
+      button("n", " " .. lvim.icons.ui.Project .. " New file", ":ene <BAR> startinsert <CR>"),
       -- button("s", " " .. kind.icons.magic .. " Restore", ":lua require('persistence').load()<cr>"),
       -- button(
       --   "g",
       --   " " .. kind.icons.git .. " Git Status",
       --   ":lua require('lvim.core.terminal')._exec_toggle({cmd = 'lazygit', count = 1, direction = 'float'})<CR>"
       -- ),
-      button("r", " " .. kind.icons.clock .. " Recents", ":Telescope oldfiles<CR>"),
+      button("r", " " .. kind.cmp_kind.Folder .. " Recents", ":Telescope oldfiles<CR>"),
       button("c", " " .. kind.icons.settings .. " Config", ":e ~/.config/lvim/config.lua<CR>"),
       button("C", " " .. kind.cmp_kind.Color .. " Colorscheme Config", ":e ~/.config/lvim/lua/user/colorscheme.lua<CR>"),
-      button("l", " " .. lvim.icons.ui.Project .. " Lazy", "<CMD>Lazy<CR>"),
-      button("q", " " .. kind.icons.exit .. " Quit", ":q<CR>"),
+      button("l", " " .. kind.icons.git .. " Lazy", "<CMD>Lazy<CR>"),
+      button("q", " " .. kind.icons.magic .. " Quit", ":q<CR>"),
    }
 }
 
