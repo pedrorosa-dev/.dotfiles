@@ -84,7 +84,7 @@ lvim.builtin.which_key.mappings["K"] = {
    e = { "<cmd>ASToggle<cr>", "Enable/Disable" }
 }
 
-lvim.builtin.which_key.mappings[":"] = {
+lvim.builtin.which_key.mappings["v"] = {
    name = "+Copilot",
    d = { "<cmd>Copilot disable<cr>", "Disable" },
    e = { "<cmd>Copilot enable<cr>", "Enable" },
@@ -98,7 +98,7 @@ lvim.builtin.which_key.mappings[":"] = {
 }
 
 
-lvim.builtin.which_key.mappings["v"] = {
+lvim.builtin.which_key.mappings["m"] = {
    name = "+Window",
    h = { "<cmd>wincmd H<cr>", "Swap Left" },
    l = { "<cmd>wincmd L<cr>", "Swap Right" },
