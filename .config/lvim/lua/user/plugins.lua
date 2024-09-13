@@ -16,6 +16,8 @@ lvim.plugins = {
    { "folke/twilight.nvim" },
    { "ThePrimeagen/harpoon" },
    { "szw/vim-maximizer" },
+   { "akinsho/git-conflict.nvim" },
+   { "stevearc/dressing.nvim" },
    { "folke/trouble.nvim" },
    {
       "nvim-treesitter/nvim-treesitter-context",
