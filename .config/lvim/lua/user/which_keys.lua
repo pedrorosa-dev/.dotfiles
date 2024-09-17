@@ -110,7 +110,9 @@ lvim.builtin.which_key.mappings["m"] = {
    t = { "<cmd>resize 9<cr>", "Resize Top" },
    f = { "<cmd>resize 0<cr>", "Resize Max" },
    b = { "<cmd>resize 18<cr>", "Resize Bottom" },
-   m = { "<cmd>MaximizerToggle<cr>", "Maximize Toggle" }
+   m = { "<cmd>MaximizerToggle<cr>", "Maximize Toggle" },
+   q = { "<cmd>vsplit<cr>", "Vertical Split" },
+   n = { "<cmd>split<cr>", "Horizontal Split" }
 }
 
 lvim.builtin.which_key.mappings["N"] = {
