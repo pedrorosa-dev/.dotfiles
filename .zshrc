@@ -53,7 +53,7 @@ bindkey '^[[B' history-search-forward
 if command -v tmux &> /dev/null; then
     if [ -z "$TMUX" ]; then
         # Tenta anexar a uma sessão existente, senão cria uma nova no diretório home
-        tmux attach || (cd ~ && tmux new-session -s home)
+        tmux attach || (cd ~ && tmux new-session -s Home)
     fi
 fi
 
