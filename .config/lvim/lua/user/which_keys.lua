@@ -20,6 +20,11 @@ lvim.builtin.which_key.mappings["n"] = {
 }
 
 
+lvim.builtin.which_key.mappings["c"] = {
+   name = "+ZenMode",
+   e = { "<cmd>ZenMode<cr>", "Toggle" },
+}
+
 
 -- lvim.builtin.which_key.mappings["o"] = {
 --   name = "+Terminal",
@@ -45,14 +50,6 @@ lvim.builtin.which_key.mappings["z"] = {
    name = "+Oil",
    o = { "<cmd>Oil<cr>", "Oil" }
 }
-
-
-lvim.builtin.which_key.mappings[":"] = {
-   name = "+FileBrowser",
-   f = { "<cmd>Telescope file_browser<cr>", "File Browser" }
-}
-
-
 
 
 lvim.builtin.which_key.mappings["r"] = {

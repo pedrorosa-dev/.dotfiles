@@ -293,6 +293,7 @@ M.config = function()
             c = { "<cmd>Telescope colorscheme<cr>", "Colorscheme" },
             f = { "<cmd>Telescope find_files<cr>", "Find File" },
             w = { "<cmd>Telescope file_browser<cr>", "File Browser" },
+            i = { "<cmd>Telescope spell_suggest<cr>", "Spell Suggest" },
             m = { "<cmd>Telescope current_buffer_fuzzy_find<cr>", "Find File Fuzzy" },
             h = { "<cmd>Telescope help_tags<cr>", "Find Help" },
             H = { "<cmd>Telescope highlights<cr>", "Find highlight groups" },

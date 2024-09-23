@@ -136,7 +136,7 @@ lvim.plugins = {
             },
             submit = {
                normal = "<CR>",  -- Submeter no modo normal
-               insert = "<S-s>", -- Submeter no modo de inserção
+               insert = "<C-s>", -- Submeter no modo de inserção
             },
             sidebar = {
                switch_windows = "<Tab>",           -- Alternar janelas
@@ -278,7 +278,6 @@ lvim.plugins = {
       },
       config = function()
          local lint = require("lint")
-
          lint.linters_by_ft = {
             javascript = { "eslint", "biomejs" },
             typescript = { "eslint", "biomejs" },
@@ -287,7 +286,8 @@ lvim.plugins = {
             python = { "pylint" },
             ruby = { "rubocop" },
             markdown = { "alex" },
-            php = { "php" },
+            php = { "phpcs" },
+            codespell = { "codespell", "cspell" },
          }
          local lint_augroup = vim.api.nvim_create_augroup("lint", { clear = true })
 
