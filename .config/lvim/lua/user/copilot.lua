@@ -21,4 +21,3 @@ copilot.setup({
       ghost_text = true, -- Ativar o ghost text (texto que aparece em linha com sugestões)
    },
 })
-

@@ -126,3 +126,12 @@ lvim.builtin.which_key.mappings["N"] = {
    p = { "<cmd>Neotest output-panel<cr>", "Output-Panel" },
    S = { "<cmd>Neotest summary<cr>", "Summary" }
 }
+
+lvim.builtin.which_key.mappings["a"] = {
+   name = "+Avante",
+   c = { "<cmd>AvanteChat<cr>", "Open Chat" },
+   a = { "<cmd>AvanteAsk<cr>", "Avante Ask" },
+   d = { "<cmd>AvanteClear<cr>", "Avante Clear" },
+   r = { "<cmd>AvanteRefresh<cr>", "Avante Refresh" },
+   t = { "<cmd>AvanteToggle<cr>", "Avante Toggle" },
+}

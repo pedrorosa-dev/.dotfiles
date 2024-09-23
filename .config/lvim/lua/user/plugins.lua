@@ -89,11 +89,67 @@ lvim.plugins = {
    {
       "yetone/avante.nvim",
       event = "VeryLazy",
-      lazy = false,            -- Opcional: para garantir que ele carregue sempre
-      version = false,         -- Use sempre a versão mais recente
+      lazy = false,                             -- Opcional: para garantir que ele carregue sempre
+      version = false,                          -- Use sempre a versão mais recente
       opts = {
-         provider = "copilot", -- Define o Copilot como o provedor de IA
-         auto_suggestions_provider = "copilot",
+         provider = "copilot",                  -- Define o Copilot como o provedor de IA
+         auto_suggestions_provider = "copilot", -- Provedor para sugestões automáticas
+         behaviour = {
+            auto_suggestions = false,           -- Fase experimental
+            auto_set_highlight_group = true,
+            auto_set_keymaps = true,
+            auto_apply_diff_after_generation = false,
+            support_paste_from_clipboard = false,
+         },
+         mappings = {
+            diff = {
+               ours = "co",       -- Aceitar nossa versão
+               theirs = "ct",     -- Aceitar a versão deles
+               all_theirs = "ca", -- Aceitar todas as versões deles
+               both = "cb",       -- Aceitar ambas as versões
+               cursor = "cc",     -- Aceitar a versão do cursor
+               next = "]x",       -- Próximo conflito
+               prev = "[x",       -- Conflito anterior
+            },
+            suggestion = {
+               accept = "<M-l>",  -- Aceitar sugestão
+               next = "<M-]>",    -- Próxima sugestão
+               prev = "<M-[>",    -- Sugestão anterior
+               dismiss = "<M-]>", -- Descartar sugestão
+            },
+            jump = {
+               next = "]]", -- Próximo
+               prev = "[[", -- Anterior
+            },
+            submit = {
+               normal = "<CR>",  -- Submeter no modo normal
+               insert = "<S-s>", -- Submeter no modo de inserção
+            },
+            sidebar = {
+               switch_windows = "<Tab>",           -- Alternar janelas
+               reverse_switch_windows = "<S-Tab>", -- Alternar janelas na ordem inversa
+            },
+         },
+         hints = { enabled = true }, -- Ativar dicas
+         windows = {
+            position = "left",       -- Posição da barra lateral
+            wrap = true,             -- Similar ao vim.o.wrap
+            width = 30,              -- Largura padrão em % com base na largura disponível
+            sidebar_header = {
+               align = "center",     -- Alinhamento do título
+               rounded = true,       -- Bordas arredondadas
+            },
+         },
+         highlights = {
+            diff = {
+               current = "DiffText", -- Cor para o texto atual
+               incoming = "DiffAdd", -- Cor para o texto novo
+            },
+         },
+         diff = {
+            autojump = true,       -- Auto pular para o próximo conflito
+            list_opener = "copen", -- Comando para abrir a lista de conflitos
+         },
       },
       build = "make", -- Comando para compilar a versão mais recente
       dependencies = {
@@ -110,11 +166,11 @@ lvim.plugins = {
                   embed_image_as_base64 = false,
                   prompt_for_file_nam   = false,
                   drag_and_drop         = {
-                     insert_mode = true
+                     insert_mode = true,
                   },
                   use_absolute_path     = true,
-               }
-            }
+               },
+            },
          },
          {
             "MeanderingProgrammer/render-markdown.nvim",
@@ -122,10 +178,10 @@ lvim.plugins = {
                file_types = { "markdown", "Avante" },
             },
             ft = { "markdown", "Avante" },
-         }
-
+         },
       },
    },
+
    --------------------------------------------
    -- *=================*
    -- | PLUGINS DE TEMA |
