@@ -73,7 +73,59 @@ lvim.plugins = {
    --- *=================*
    --
    -- { 'ExaFunction/codeium.vim' },
+   {
+      "zbirenbaum/copilot.lua",
+      cmd = "Copilot",
+      event = "InsertEnter",
+   },
+   {
+      "zbirenbaum/copilot-cmp",
+      after = { "copilot.lua" },
+      config = function()
+         require("copilot_cmp").setup()
+      end,
+   },
    { "AndreM222/copilot-lualine" },
+   {
+      "yetone/avante.nvim",
+      event = "VeryLazy",
+      lazy = false,            -- Opcional: para garantir que ele carregue sempre
+      version = false,         -- Use sempre a versão mais recente
+      opts = {
+         provider = "copilot", -- Define o Copilot como o provedor de IA
+         auto_suggestions_provider = "copilot",
+      },
+      build = "make", -- Comando para compilar a versão mais recente
+      dependencies = {
+         "nvim-lua/plenary.nvim",
+         "MunifTanjim/nui.nvim",
+         "stevearc/dressing.nvim",
+         "zbirenbaum/copilot.lua",      -- Adiciona o copilot.lua como dependência
+         "nvim-tree/nvim-web-devicons", -- Ícones opcionais
+         {
+            "HakonHarnes/img-clip.nvim",
+            event = "VeryLazy",
+            opts = {
+               default = {
+                  embed_image_as_base64 = false,
+                  prompt_for_file_nam   = false,
+                  drag_and_drop         = {
+                     insert_mode = true
+                  },
+                  use_absolute_path     = true,
+               }
+            }
+         },
+         {
+            "MeanderingProgrammer/render-markdown.nvim",
+            opts = {
+               file_types = { "markdown", "Avante" },
+            },
+            ft = { "markdown", "Avante" },
+         }
+
+      },
+   },
    --------------------------------------------
    -- *=================*
    -- | PLUGINS DE TEMA |
@@ -136,18 +188,6 @@ lvim.plugins = {
          require("nvim-surround").setup({
             -- Configuration here, or leave empty to use defaults
          })
-      end,
-   },
-   {
-      "zbirenbaum/copilot.lua",
-      cmd = "Copilot",
-      event = "InsertEnter",
-   },
-   {
-      "zbirenbaum/copilot-cmp",
-      after = { "copilot.lua" },
-      config = function()
-         require("copilot_cmp").setup()
       end,
    },
    -- {

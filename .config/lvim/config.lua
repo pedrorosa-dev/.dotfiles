@@ -15,6 +15,7 @@ reload('user.harpoon')
 reload('user.neotest')
 reload('user.dap')
 require("mason-nvim-dap").setup()
+require('avante_lib').load()
 
 vim.opt.clipboard = "unnamedplus"
 -- lvim.format_on_save.enabled = true
