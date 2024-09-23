@@ -20,7 +20,7 @@ lvim.builtin.which_key.mappings["n"] = {
 }
 
 
-lvim.builtin.which_key.mappings["c"] = {
+lvim.builtin.which_key.mappings[":"] = {
    name = "+ZenMode",
    e = { "<cmd>ZenMode<cr>", "Toggle" },
 }
