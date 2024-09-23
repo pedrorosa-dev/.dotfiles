@@ -47,6 +47,10 @@ lvim.builtin.which_key.mappings["z"] = {
 }
 
 
+lvim.builtin.which_key.mappings[":"] = {
+   name = "+FileBrowser",
+   f = { "<cmd>Telescope file_browser<cr>", "File Browser" }
+}
 
 
 

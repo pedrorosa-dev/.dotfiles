@@ -6,8 +6,8 @@ lvim.plugins = {
    { "alvan/vim-closetag" },
    { "windwp/nvim-ts-autotag" },
    { "andweeb/presence.nvim" },
-   { "MunifTanjim/prettier.nvim" },
-   { "MunifTanjim/eslint.nvim" },
+   -- { "MunifTanjim/prettier.nvim" },
+   -- { "MunifTanjim/eslint.nvim" },
    { "Mohammed-Taher/AdvancedNewFile.nvim" },
    { "folke/zen-mode.nvim" },
    { "filipdutescu/renamer.nvim" },
@@ -105,6 +105,7 @@ lvim.plugins = {
       version = false,                          -- Use sempre a versão mais recente
       opts = {
          provider = "copilot",                  -- Define o Copilot como o provedor de IA
+         -- client_id =
          auto_suggestions_provider = "copilot", -- Provedor para sugestões automáticas
          behaviour = {
             auto_suggestions = false,           -- Fase experimental
@@ -146,7 +147,7 @@ lvim.plugins = {
          windows = {
             position = "left",       -- Posição da barra lateral
             wrap = true,             -- Similar ao vim.o.wrap
-            width = 30,              -- Largura padrão em % com base na largura disponível
+            width = 35,              -- Largura padrão em % com base na largura disponível
             sidebar_header = {
                align = "center",     -- Alinhamento do título
                rounded = true,       -- Bordas arredondadas
@@ -279,10 +280,10 @@ lvim.plugins = {
          local lint = require("lint")
 
          lint.linters_by_ft = {
-            javascript = { "eslint" },
-            typescript = { "eslint" },
-            javascriptreact = { "eslint" },
-            typescriptreact = { "eslint" },
+            javascript = { "eslint", "biomejs" },
+            typescript = { "eslint", "biomejs" },
+            javascriptreact = { "eslint", "biomejs" },
+            typescriptreact = { "eslint", "biomejs" },
             python = { "pylint" },
             ruby = { "rubocop" },
             markdown = { "alex" },
@@ -339,12 +340,12 @@ lvim.plugins = {
 
          conform.setup({
             formatters_by_ft = {
-               javascript = { "prettier", "biome" },
-               typescript = { "prettier", "biome" },
+               javascript = { "prettier", "biome", "biome-check" },
+               typescript = { "prettier", "biome", "biome-check" },
                html = { "prettier" },
                css = { "prettier" },
-               javascriptreact = { "prettier", "biome" },
-               typescriptreact = { "prettier", "biome" },
+               javascriptreact = { "prettier", "biome", "biome-check" },
+               typescriptreact = { "prettier", "biome", "biome-check" },
                python = { "isort", "autopep8" },
                ruby = { "rubocop" },
                lua = { "stylua" },
