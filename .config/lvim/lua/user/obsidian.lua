@@ -45,7 +45,7 @@ require("obsidian").setup({
          opts = { buffer = true, expr = true },
       }
    },
-   new_notes_location = "notes_subdir",
+   new_notes_location = "~/Projects/obsidian-palacio-mental/home/Anotacoes/NotasRealocar",
    note_id_func = function(title)
       local suffix = ""
       if title ~= nil then
@@ -82,7 +82,7 @@ require("obsidian").setup({
       return out
    end,
    templates = {
-      folder = "templates",
+      folder = "~/Projects/obsidian-palacio-mental/Templates/template notas.md",
       date_format = "%Y-%m-%d",
       time_format = "%H:%M",
       substitutions = {},

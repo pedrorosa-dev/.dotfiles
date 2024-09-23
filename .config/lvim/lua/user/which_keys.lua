@@ -113,7 +113,12 @@ lvim.builtin.which_key.mappings["m"] = {
    b = { "<cmd>resize 18<cr>", "Resize Bottom" },
    m = { "<cmd>MaximizerToggle<cr>", "Maximize Toggle" },
    q = { "<cmd>vsplit<cr>", "Vertical Split" },
-   n = { "<cmd>split<cr>", "Horizontal Split" }
+   n = { "<cmd>split<cr>", "Horizontal Split" },
+   e = { "<cmd>tabprevious<cr>", "Tab Previous" },
+   r = { "<cmd>tabnext<cr>", "Tab Next" },
+   w = { "<cmd>tabclose<cr>", "Tab Close" },
+   y = { "<cmd>tabonly<cr>", "Tab Only" },
+   u = { "<cmd>tabnew<cr>", "Tab New" }
 }
 
 lvim.builtin.which_key.mappings["N"] = {
