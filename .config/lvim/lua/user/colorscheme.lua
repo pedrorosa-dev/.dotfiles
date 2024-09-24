@@ -1,4 +1,4 @@
-lvim.colorscheme = "catppuccin-mocha"
+lvim.colorscheme = "min-theme"
 
 
 require("nvim-highlight-colors").setup({})
@@ -33,7 +33,7 @@ require('min-theme').setup({
       EndOfBuffer = { fg = "#202020", bg = "#202020" },         -- Configuração para o final do buffer
       -- NonText = { fg = "#FFFFFF" },                   -- Non-text foreground
       -- Comment = { fg = "#51506e", italic = true },
-      -- Constant = { fg = "#FF5555" },    -- Red
+      -- Constant = { fg = "#FF657E" }, -- Red
       -- String = { fg = "#FFB86C" },      -- Orange
       -- Identifier = { fg = "#94E59B" }, -- Yellow
       -- Function = { fg = "#EEA177" },    -- Green
@@ -54,32 +54,39 @@ require('min-theme').setup({
 
 
 
--- local dracula = require("dracula")
--- dracula.setup({
---   colors = {
---     bg = "#1e1d22",        -- background cinza mais escuro #121212, cor padrao do dracula ##282A36, backcround cinza escuro #1E1E1E
---     fg = "#F8F8F2",
---     selection = "#1e1d22", -- #44475A
---     comment = "#51506e",
---     red = "#FF5555",
---     orange = "#FFB86C",
---     yellow = "#F1FA8C", --  original #F1FA8C   #94E59B
---     green = "#50FA7B",  --  original #50FA7B   #EEA177
---     purple = "#BD93F9", --  original #BD93F9   #B0BEFF
---     cyan = "#f95aa5",   -- original  #f95aa5    #D1A4FD
---     pink = "#FF92DF",   -- original  #FF92DF   #B2BEFF
---     bright_red = "#FFFFFF",
---     bright_green = "#69FF94",
---     bright_yellow = "#FFFFA5",
---     bright_blue = "#D6ACFF",
---     bright_magenta = "#FF92DF",
---     bright_cyan = "#A4FFFF",
---     bright_white = "#FFFFFF",
---     menu = "#222126",
---     visual = "#3E4452",
---     gutter_fg = "#4B5263",
---     nontext = "#FFFFFF",
---     white = "#ABB2BF",
---     black = "#191A21",
---   },
--- })
+local dracula = require("dracula")
+dracula.setup({
+   colors = {
+      bg = "#1e1d22",        -- background cinza mais escuro #121212, cor padrao do dracula ##282A36, backcround cinza escuro #1E1E1E
+      fg = "#F8F8F2",
+      selection = "#1e1d22", -- #44475A
+      comment = "#51506e",
+      red = "#FF5555",
+      orange = "#FFB86C",
+      yellow = "#F1FA8C", --  original #F1FA8C   #94E59B
+      green = "#50FA7B",  --  original #50FA7B   #EEA177
+      purple = "#BD93F9", --  original #BD93F9   #B0BEFF
+      cyan = "#f95aa5",   -- original  #f95aa5    #D1A4FD
+      pink = "#FF92DF",   -- original  #FF92DF   #B2BEFF
+      bright_red = "#FFFFFF",
+      bright_green = "#69FF94",
+      bright_yellow = "#FFFFA5",
+      bright_blue = "#D6ACFF",
+      bright_magenta = "#FF92DF",
+      bright_cyan = "#A4FFFF",
+      bright_white = "#FFFFFF",
+      menu = "#222126",
+      visual = "#3E4452",
+      gutter_fg = "#4B5263",
+      nontext = "#FFFFFF",
+      white = "#ABB2BF",
+      black = "#191A21",
+      NvimTreeNormal = "#1e1d22",
+      WinBarNC = { fg = "#1e1d22", bg = "#1e1d22" },
+      EndOfBuffer = { fg = "#1e1d22", bg = "#1e1d22" }, -- Configuração para o final do buffer
+      NvimTreeFolderName = "#1e1d22",
+      NvimTreeEmptyFolderName = "#1e1d22",
+      NvimTreeOpenedFolderName = "#1e1d22",
+      NvimTreeEndOfBuffer = "#1e1d22",
+   },
+})

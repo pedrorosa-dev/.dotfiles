@@ -1,8 +1,8 @@
 lvim.builtin.lualine.sections.lualine_a = { "mode" }
 lvim.builtin.lualine.sections.lualine_b = { "branch" }
-lvim.builtin.lualine.sections.lualine_c = { "filename" }
-lvim.builtin.lualine.sections.lualine_x = { "copilot", "codeium", "encoding", "fileformat" }
-lvim.builtin.lualine.sections.lualine_y = { "diagnostics", "filetype", "progress" }
+lvim.builtin.lualine.sections.lualine_c = { "diff" }
+lvim.builtin.lualine.sections.lualine_x = { "diagnostics", "copilot" } --fileformat
+lvim.builtin.lualine.sections.lualine_y = { "filetype", "progress" }   --encondig
 lvim.builtin.lualine.sections.lualine_z = { "location" }
 
 
