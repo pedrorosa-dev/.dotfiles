@@ -39,7 +39,7 @@ lvim.builtin.lualine.sections.lualine_a = { "mode" }
 lvim.builtin.lualine.sections.lualine_b = { "branch" }
 lvim.builtin.lualine.sections.lualine_c = { git_diff }
 lvim.builtin.lualine.sections.lualine_x = { "diagnostics", "copilot" }
-lvim.builtin.lualine.sections.lualine_y = { "filetype", "progress" }
+lvim.builtin.lualine.sections.lualine_y = { "filetype", "progress", "filename" }
 lvim.builtin.lualine.sections.lualine_z = { "location", current_time }
 
 

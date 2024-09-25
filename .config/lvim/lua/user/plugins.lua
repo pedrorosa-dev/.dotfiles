@@ -272,6 +272,12 @@ lvim.plugins = {
    { "AlexvZyl/nordic.nvim" },
    { "projekt0n/github-nvim-theme" },
    { "rose-pine/neovim" },
+   {
+      "killitar/obscure.nvim",
+      lazy = false,
+      priority = 1000,
+      opts = {}
+   },
    { "shaunsingh/nord.nvim" },
    { "luisiacc/gruvbox-baby" },
    { "ellisonleao/gruvbox.nvim" },
