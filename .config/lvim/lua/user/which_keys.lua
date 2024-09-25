@@ -95,7 +95,13 @@ lvim.builtin.which_key.mappings["v"] = {
    t = { "<cmd>Copilot toggle<cr>", "toggle" },
    a = { "<cmd>Copilot attach<cr>", "Attach" },
    D = { "<cmd>Copilot detach<cr>", "Detach" },
-   v = { "<cmd>Copilot version<cr>", "Version" }
+   v = { "<cmd>Copilot version<cr>", "Version" },
+   c = { "<cmd>CopilotChatToggle<cr>", "Copilot Chat" },
+   k = { "<cmd>CopilotChatReset<cr>", "Copilot Chat Reset" },
+   g = { "<cmd>CopilotChatCommitStaged<cr>", "Copilot Chat Commit Staged" },
+   G = { "<cmd>CopilotChatCommit<cr>", "Copilot Chat Commit" },
+   f = { "<cmd>CopilotChatFix<cr>", "Copilot Chat Fix" },
+   F = { "<cmd>CopilotChatExplain<cr>", "Copilot Chat Explain" }
 }
 
 

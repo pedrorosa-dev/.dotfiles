@@ -5,6 +5,7 @@ require("nvim-highlight-colors").setup({})
 
 
 
+
 require('min-theme').setup({
    theme = 'dark',      -- String: 'dark' or 'light', determines the colorscheme used
    transparent = true,  -- Boolean: Sets the background to transparent
@@ -20,7 +21,7 @@ require('min-theme').setup({
       Visual = { bg = "#606060" },                              -- #606060  #264F78                          -- Selection color (Visual mode)
       CursorLine = { bg = "#323232" },                          -- Background color for the current line #323232 #252525
       LineNr = { fg = "#4B5263" },                              -- Gutter foreground #646464
-      NormalFloat = { fg = "#ABB2BF" },                         -- White
+      NormalFloat = { fg = "#ABB2BF", bg = "#202020" },         -- White #ABB2BF
       Search = { bg = "#606060", fg = "#ABB2BF" },              -- Highlight color for search matches
       IncSearch = { bg = "#606060", fg = "#FF657E" },           -- Highlight color for incremental search matches
       NvimTreeNormal = { bg = "#1A1A1A" },                      -- Background color for nvim-tree headers
@@ -47,7 +48,6 @@ require('min-theme').setup({
       -- Macro = { fg = "#FF92DF" },       -- Bright Magenta
       -- PreCondit = { fg = "#A4FFFF" },   -- Bright Cyan
       -- Todo = { fg = "#FFFFFF" },    -- Bright White
-      -- Pmenu = { bg = "#1A1A1A" }, -- Menu background
    },
 })
 

@@ -6,6 +6,7 @@ lvim.plugins = {
    { "alvan/vim-closetag" },
    { "windwp/nvim-ts-autotag" },
    { "andweeb/presence.nvim" },
+   { "andymass/vim-matchup" },
    -- { "MunifTanjim/prettier.nvim" },
    -- { "MunifTanjim/eslint.nvim" },
    { "Mohammed-Taher/AdvancedNewFile.nvim" },
@@ -17,6 +18,14 @@ lvim.plugins = {
    { "ThePrimeagen/harpoon" },
    { "szw/vim-maximizer" },
    { "akinsho/git-conflict.nvim" },
+   {
+      'b0o/incline.nvim',
+      config = function()
+         require('incline').setup()
+      end,
+      -- Optional: Lazy load Incline
+      event = 'VeryLazy',
+   },
    { "stevearc/dressing.nvim" },
    { "folke/trouble.nvim" },
    {
@@ -26,6 +35,22 @@ lvim.plugins = {
             enable = false,
          }
       end
+   },
+   {
+      'j-hui/fidget.nvim',
+      tag = 'legacy', -- Usar essa tag é recomendado, já que versões futuras podem mudar a API
+      config = function()
+         require('fidget').setup {
+            text = {
+               spinner = "dots", -- O estilo do spinner (há várias opções, como "dots", "line", etc.)
+            },
+            window = {
+               relative = "win",   -- Onde a janela de status será posicionada
+               blend = 0,          -- Transparência da janela
+               border = "rounded", -- Estilo da borda da janela
+            },
+         }
+      end,
    },
    {
       "kdheepak/lazygit.nvim",
@@ -78,7 +103,7 @@ lvim.plugins = {
             },
             {
                name = "work",
-               -- path = "~/Projects/obsidian-palacio-mental",
+               path = "~/Projects/obsidian-palacio-mental",
             },
          },
          ui = {
@@ -98,13 +123,12 @@ lvim.plugins = {
    { "mfussenegger/nvim-dap-python" },
    { "nvim-neotest/neotest" },
    { "nvim-neotest/neotest-python" },
+   { "nvim-neotest/neotest-jest" },
 
    --------------------------------------------
    --- *=================*
    --- | PLUGINS DE IA |
    --- *=================*
-   --
-
    -- {
    --    "Exafunction/codeium.nvim",
    --    dependencies = {
@@ -116,6 +140,20 @@ lvim.plugins = {
    --       })
    --    end
    -- },
+   {
+      "CopilotC-Nvim/CopilotChat.nvim",
+      branch = "canary",
+      dependencies = {
+         { "zbirenbaum/copilot.lua" }, -- or github/copilot.vim
+         { "nvim-lua/plenary.nvim" },  -- for curl, log wrapper
+      },
+      build = "make tiktoken",         -- Only on MacOS or Linux
+      opts = {
+         debug = true,                 -- Enable debugging
+         -- See Configuration section for rest
+      },
+      -- See Commands section for default commands if you want to lazy load on them
+   },
 
    {
       "zbirenbaum/copilot.lua",
@@ -137,7 +175,6 @@ lvim.plugins = {
       version = false,                          -- Use sempre a versão mais recente
       opts = {
          provider = "copilot",                  -- Define o Copilot como o provedor de IA
-         -- client_id =
          auto_suggestions_provider = "copilot", -- Provedor para sugestões automáticas
          behaviour = {
             auto_suggestions = false,           -- Fase experimental
@@ -179,7 +216,7 @@ lvim.plugins = {
          windows = {
             position = "left",       -- Posição da barra lateral
             wrap = true,             -- Similar ao vim.o.wrap
-            width = 35,              -- Largura padrão em % com base na largura disponível
+            width = 32,              -- Largura padrão em % com base na largura disponível
             sidebar_header = {
                align = "center",     -- Alinhamento do título
                rounded = true,       -- Bordas arredondadas
@@ -234,6 +271,7 @@ lvim.plugins = {
    --
    { "AlexvZyl/nordic.nvim" },
    { "projekt0n/github-nvim-theme" },
+   { "rose-pine/neovim" },
    { "shaunsingh/nord.nvim" },
    { "luisiacc/gruvbox-baby" },
    { "ellisonleao/gruvbox.nvim" },
