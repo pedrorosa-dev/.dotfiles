@@ -29,9 +29,9 @@ local function git_diff()
 end
 
 -- Função para exibir o horário atual
-local function current_time()
-   return os.date('%H:%M') -- Formato 24h (altere para '%I:%M %p' para 12h com AM/PM)
-end
+-- local function current_time()
+--    return os.date('%H:%M') -- Formato 24h (altere para '%I:%M %p' para 12h com AM/PM)
+-- end
 
 
 -- Configuração do lualine
@@ -40,7 +40,7 @@ lvim.builtin.lualine.sections.lualine_b = { "branch" }
 lvim.builtin.lualine.sections.lualine_c = { git_diff }
 lvim.builtin.lualine.sections.lualine_x = { "diagnostics", "copilot" }
 lvim.builtin.lualine.sections.lualine_y = { "filetype", "progress", "filename" }
-lvim.builtin.lualine.sections.lualine_z = { "location", current_time }
+lvim.builtin.lualine.sections.lualine_z = { "location" }
 
 
 

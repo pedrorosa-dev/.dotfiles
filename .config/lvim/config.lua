@@ -17,6 +17,7 @@ reload('user.obsidian')
 reload('user.dap')
 reload('user.incline')
 require("mason-nvim-dap").setup()
+require('avante_lib').load()
 vim.opt.clipboard = "unnamedplus"
 -- lvim.format_on_save.enabled = true
 lvim.transparent_window = false

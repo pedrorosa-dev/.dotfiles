@@ -1,4 +1,4 @@
-lvim.colorscheme = "catppuccin-mocha"
+lvim.colorscheme = "min-theme"
 
 
 require("nvim-highlight-colors").setup({})

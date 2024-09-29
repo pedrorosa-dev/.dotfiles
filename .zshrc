@@ -60,6 +60,8 @@ fi
 
 #ALIAS
 alias P="~/Projects"
+alias C="~/Library/Mobile\ Documents/com~apple~CloudDocs"
+alias PC="~/Library/Mobile\ Documents/com~apple~CloudDocs/Projects"
 alias PH="/Applications/XAMPP/xamppfiles/htdocs/projects"
 alias psqlu='psql -U postgres'
 alias rn="lvim"

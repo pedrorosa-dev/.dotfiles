@@ -171,7 +171,7 @@ lvim.plugins = {
    {
       "yetone/avante.nvim",
       event = "VeryLazy",
-      lazy = false,                             -- Opcional: para garantir que ele carregue sempre
+      lazy = true,                              -- Opcional: para garantir que ele carregue sempre
       version = false,                          -- Use sempre a versão mais recente
       opts = {
          provider = "copilot",                  -- Define o Copilot como o provedor de IA
