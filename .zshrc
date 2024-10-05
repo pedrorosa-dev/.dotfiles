@@ -11,7 +11,6 @@ ZSH_THEME="agnoster"
 # ZSH_THEME="robbyrussell"
 
 
-
 ## oh my posh
 # alguns temas - tokyonight_storm, catppuccin_mocha
 # eval "$(oh-my-posh init zsh --config $(brew --prefix oh-my-posh)/themes/tokyonight_storm.omp.json)"
@@ -50,12 +49,12 @@ bindkey '^[[A' history-search-backward
 bindkey '^[[B' history-search-forward
 
 # iniciar o tmux
-if command -v tmux &> /dev/null; then
-    if [ -z "$TMUX" ]; then
-        # Tenta anexar a uma sessão existente, senão cria uma nova no diretório home
-        tmux attach || (cd ~ && tmux new-session -s Home)
-    fi
-fi
+# if command -v tmux &> /dev/null; then
+#     if [ -z "$TMUX" ]; then
+#         # Tenta anexar a uma sessão existente, senão cria uma nova no diretório home
+#         tmux attach || (cd ~ && tmux new-session -s Home)
+#     fi
+# fi
 
 
 #ALIAS
@@ -122,10 +121,17 @@ alias cd="z"
 
 
 # Dependências de programação 
+
 # node
+#Homebrew
 export NVM_DIR="$HOME/.nvm"
-[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
-[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
+[ -s "/opt/homebrew/opt/nvm/nvm.sh" ] && \. "/opt/homebrew/opt/nvm/nvm.sh"  # This loads nvm
+[ -s "/opt/homebrew/opt/nvm/etc/bash_completion.d/nvm" ] && \. "/opt/homebrew/opt/nvm/etc/bash_completion.d/nvm"  # This loads nvm bash_completion
+
+# Se for pelo curl
+# export NVM_DIR="$HOME/.nvm"
+# [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
+# [ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
 
 
 # ruby
