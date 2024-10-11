@@ -1,9 +1,14 @@
 export ZSH="$HOME/.oh-my-zsh"
 export PATH="/opt/homebrew/opt/ripgrep/bin:$PATH"
 export PATH="/opt/homebrew/opt/postgresql@16/bin:$PATH"
+export PATH="$PATH:/Users/pedrorosa-dev/.yarn/bin"
+export PATH="$PATH:/Users/pedrorosa-dev/.bun/bin"
+export PATH="$PATH:/Users/pedrorosa-dev/Library/pnpm/global/5/node_modules"
+export PATH="$PATH:/Users/pedrorosa-dev/node_modules/.bin"
+
+
 ZSH_THEME="agnoster"
 # ZSH_THEME="robbyrussell"
-
 
 
 ## oh my posh
@@ -12,7 +17,7 @@ ZSH_THEME="agnoster"
 
 # CONFIG PESSOAL DO ohmyposh 
 # bubblesboth.toml, zen.toml, bubblesleft.toml
-eval "$(oh-my-posh init zsh --config $HOME/.config/ohmyposh/bubblesboth.toml)"
+eval "$(oh-my-posh init zsh --config $HOME/.config/ohmyposh/zen.toml)"
 
 
 
@@ -47,13 +52,15 @@ bindkey '^[[B' history-search-forward
 if command -v tmux &> /dev/null; then
     if [ -z "$TMUX" ]; then
         # Tenta anexar a uma sessão existente, senão cria uma nova no diretório home
-        tmux attach || (cd ~ && tmux new-session -s home)
+        tmux attach || (cd ~ && tmux new-session -s Home)
     fi
 fi
 
 
 #ALIAS
 alias P="~/Projects"
+alias C="~/Library/Mobile\ Documents/com~apple~CloudDocs"
+alias PC="~/Library/Mobile\ Documents/com~apple~CloudDocs/Projects"
 alias PH="/Applications/XAMPP/xamppfiles/htdocs/projects"
 alias psqlu='psql -U postgres'
 alias rn="lvim"
@@ -61,7 +68,7 @@ alias cls='clear'
 alias live='live-server'
 alias neo='neofetch'
 alias lg='lazygit'
-alias img="viu"
+alias img="imgcat"
 alias tls="tmux list-sessions"
 alias taa="tmux attach-session -t "
 alias tnn="tmux new-session -s "
@@ -114,10 +121,17 @@ alias cd="z"
 
 
 # Dependências de programação 
+
 # node
+#Homebrew
 export NVM_DIR="$HOME/.nvm"
-[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
-[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
+[ -s "/opt/homebrew/opt/nvm/nvm.sh" ] && \. "/opt/homebrew/opt/nvm/nvm.sh"  # This loads nvm
+[ -s "/opt/homebrew/opt/nvm/etc/bash_completion.d/nvm" ] && \. "/opt/homebrew/opt/nvm/etc/bash_completion.d/nvm"  # This loads nvm bash_completion
+
+# Se for pelo curl
+# export NVM_DIR="$HOME/.nvm"
+# [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
+# [ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
 
 
 # ruby

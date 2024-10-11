@@ -24,7 +24,7 @@ alt - g: yabai -m display --focus east || yabai -m display --focus north
 
 # rotate layout clockwise
 shift + alt - r : yabai -m space --rotate 270
-# flip along y-axis
+# flip along x-axis
 shift + alt - y : yabai -m space --mirror y-axis
 # flip along x-axis
 shift + alt - x : yabai -m space --mirror x-axis

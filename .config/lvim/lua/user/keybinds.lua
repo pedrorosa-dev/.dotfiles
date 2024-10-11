@@ -11,8 +11,8 @@ vim.api.nvim_set_keymap("n", "<A-Down>", [[:m .+1<CR>==]], { noremap = true, sil
 lvim.keys.normal_mode["<S-h>"] = ":BufferLineCyclePrev<CR>"
 lvim.keys.normal_mode["<S-l>"] = ":BufferLineCycleNext<CR>"
 
-lvim.keys.normal_mode["<S-q>"] = ":vsplit<CR>"
-lvim.keys.normal_mode["<S-n>"] = ":split<CR>"
+-- lvim.keys.normal_mode["<S-q>"] = ":vsplit<CR>"
+-- lvim.keys.normal_mode["<S-n>"] = ":split<CR>"
 
 
 vim.g.user_emmet_leader_key = '<C-y>'
