@@ -23,16 +23,3 @@ vim.opt.clipboard = "unnamedplus"
 vim.opt.shiftwidth = 3   -- Tamanho do indent (equivale ao tamanho do tab)
 vim.opt.tabstop = 3      -- Número de espaços que um tab representa
 vim.opt.expandtab = true -- Converter tabs para espaços
-
--- -- Abre o Telescope find_files automaticamente ao iniciar o lvim e fecha o oil.nvim se estiver aberto
--- local function open_telescope_on_startup()
---    -- Fecha o oil.nvim se estiver aberto
---       vim.cmd("bd!") -- Fecha o buffer do oil.nvim
---    end
-
---    -- Abre o Telescope find_files
--- end
-
--- -- Registra o comando para ser executado ao iniciar o lvim
---    callback = open_telescope_on_startup,
--- })

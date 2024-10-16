@@ -47,8 +47,9 @@ lvim.builtin.which_key.mappings["x"] = {
 
 
 lvim.builtin.which_key.mappings["z"] = {
-   name = "+Oil",
-   o = { "<cmd>Oil<cr>", "Oil" }
+   name = "+filetype",
+   f = { "<cmd>Yazi<cr>", "yazi" },
+   -- o = { "<cmd>Oil<cr>", "Oil" },
 }
 
 
