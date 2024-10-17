@@ -23,3 +23,13 @@ vim.opt.clipboard = "unnamedplus"
 vim.opt.shiftwidth = 3   -- Tamanho do indent (equivale ao tamanho do tab)
 vim.opt.tabstop = 3      -- Número de espaços que um tab representa
 vim.opt.expandtab = true -- Converter tabs para espaços
+
+-- Configuração para abrir o Telescope File Browser ao iniciar no diretório
+vim.api.nvim_create_autocmd("VimEnter", {
+   callback = function()
+      local args = vim.fn.argv()
+      if #args == 1 and vim.fn.isdirectory(args[1]) == 1 then
+         require('telescope.builtin').find_files({ cwd = args[1] })
+      end
+   end,
+})

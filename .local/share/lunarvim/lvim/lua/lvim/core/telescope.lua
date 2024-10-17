@@ -13,7 +13,7 @@ function M.config()
       active = true,
       on_config_done = nil,
       -- INFO: AQUI QUE MUDA O TEMA CENTER OU DROPDOWN
-      theme = "dropdown", ---@type telescope_themes
+      theme = "center", ---@type telescope_themes
       defaults = {
          prompt_prefix = lvim.icons.ui.Telescope .. " ",
          selection_caret = lvim.icons.ui.Forward .. " ",
