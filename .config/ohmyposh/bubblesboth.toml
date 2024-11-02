@@ -10,14 +10,16 @@ final_space = true
   [[blocks.segments]]
     type = "os"
     template = "{{.Icon}}"
-    background = "#111111" # #111111 #181818
+    background = "#808080" # #111111 #181818 #808080
     foreground = "#FFFFFF" #9B6BDF
-    leading_diamond = "\ue0b6"
     trailing_diamond = "\ue0b4 "
+    leading_diamond = "\ue0b6" #so remover essa seta
     style = "diamond"
 
     [properties]
     macos = "mac"
+
+
 
   [[blocks.segments]]
   type = "session"
@@ -162,7 +164,7 @@ final_space = true
     foreground = "#606060" # #606060 #9B6BDF
     leading_diamond = "\ue0b6"
     trailing_diamond = "\ue0b4 "
-    foreground_templates = [ "{{ if gt .Code 0 }}#e91e63{{ end }}" ]
+    foreground_templates = [ "{{ if gt .Code 0 }}#E38073{{ end }}" ]
     template = " " ## 󰀦  
 
       [blocks.segments.properties]
@@ -205,14 +207,14 @@ final_space = true
   alignment = 'left'
   newline = true
 
+
   [[blocks.segments]]
     type = 'text'
     style = 'plain'
-    foreground = '#9B6BDF' # mesma cor do secondary_prompt
-    # foreground_templates = [
-    #   "{{if gt .Code 0}}red{{end}}",
-    #   "{{if eq .Code 0}}magenta{{end}}",
-    # ]   
+    foreground_templates = [
+      "{{if gt .Code 0}}#E38073{{end}}",
+      "{{if eq .Code 0}}#9B6BDF{{end}}",
+    ]   
     background = 'transparent'
     template = '❯'
 

@@ -10,9 +10,9 @@ final_space = true
   [[blocks.segments]]
     type = "os"
     template = "{{.Icon}}"
-    background = "#808080" #111111 #808080
+    background = "#808080"
     foreground = "#FFFFFF" # #9B6BDF
-    leading_diamond = "\ue0b6"
+    leading_diamond = "╭─\ue0b6"
     trailing_diamond = "\ue0b4 "
     style = "diamond"
 
@@ -49,7 +49,7 @@ final_space = true
     type = "git"
     style = "diamond"
     foreground = "#FFFFFF" # #43CCEA #9B6BDF
-    background = "#111111" # #111111 #181818
+    background = "#1A1A1A" # #111111 #181818
     leading_diamond = " \ue0b6"
     trailing_diamond = "\ue0b4"
     foreground_templates = [
@@ -210,11 +210,19 @@ final_space = true
   newline = true
 
   [[blocks.segments]]
+  foreground = "#a0a0a0"
+  style = "plain"
+  template = "╰─"
+  type = "text"
+
+
+  [[blocks.segments]]
     type = 'text'
     style = 'plain'
+    # foreground = '#FFFFFF' # mesma cor do secondary_prompt
     foreground_templates = [
       "{{if gt .Code 0}}#E38073{{end}}",
-      "{{if eq .Code 0}}#9B6BDF{{end}}",
+      "{{if eq .Code 0}}#FFFFFF{{end}}",
     ]   
     background = 'transparent'
     template = '❯'

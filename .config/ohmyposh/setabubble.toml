@@ -7,31 +7,40 @@ final_space = true
   type = "prompt"
   alignment = "left"
 
+
   [[blocks.segments]]
     type = "os"
     template = "{{.Icon}}"
-    background = "#808080" #111111 #808080
-    foreground = "#FFFFFF" # #9B6BDF
-    leading_diamond = "\ue0b6"
+    background = "#808080" # #111111 #181818
+    foreground = "#FFFFFF" #9B6BDF
     trailing_diamond = "\ue0b4 "
+    leading_diamond = "╭─\ue0b6"
+
     style = "diamond"
 
     [properties]
     macos = "mac"
 
-  # [[blocks.segments]]
-  # type = "session"
-  # background = "#181818"
-  # foreground = "#FFFFFF"
-  # leading_diamond = "\ue0b6"
-  # trailing_diamond = "\ue0b4 "
-  # style = "diamond"
-  # template = "{{ .UserName }} \u276f"
+
+
+  [[blocks.segments]]
+  type = "session"
+  background = "#181818" # #111111 #181818
+  foreground = "#FFFFFF" # #606060 #9B6BDF
+  leading_diamond = "\ue0b6"
+  trailing_diamond = "\ue0b4 "
+  style = "diamond"
+  template = "{{ .UserName }} \u276f"
+
+[[blocks]]
+  type = "prompt"
+  alignment = "right"
+
 
   [[blocks.segments]]
   type = "path"
-  background = "#181818" # #181818 #111111
-  foreground = "#FFFFFF" # #3EC669 #9B6BDF
+  background = "#181818" # #111111 #181818
+  foreground = "#FFFFFF" # #3EC669 #FFA86B #9B6BDF
   leading_diamond = "\ue0b6"
   trailing_diamond = "\ue0b4"
   style = "diamond"
@@ -41,15 +50,14 @@ final_space = true
       folder_icon = ''
       home_icon = ' '
       max_width = 20
-      cycle = ['#9B6BDF', '#a6a3a6', '#9B6BDF'] # 'cyan', 'magenta', 'blue'
-
+      cycle = ['#9B6BDF', '#a6a3a6', '#9B6BDF'] #cyan, magenta, blue #a6a3a6
 
 
   [[blocks.segments]]
     type = "git"
     style = "diamond"
-    foreground = "#FFFFFF" # #43CCEA #9B6BDF
-    background = "#111111" # #111111 #181818
+    foreground = "#FFFFFF" #43CCEA #FFA86B
+    background = "#1A1A1A" # #111111 #181818
     leading_diamond = " \ue0b6"
     trailing_diamond = "\ue0b4"
     foreground_templates = [
@@ -73,9 +81,7 @@ final_space = true
       "/Users/user/Projects/oh-my-posh/" = "no"
 
 
-[[blocks]]
-  type = "prompt"
-  alignment = "right"
+
 
   [[blocks.segments]]
   type = "python"
@@ -89,7 +95,7 @@ final_space = true
 
   [[blocks.segments]]
   type = "node"
-  background = "#181818"
+  background = "#181818" # #424242
   foreground = "#42E66C"
   leading_diamond = " \ue0b6"
   trailing_diamond = "\ue0b4"
@@ -126,7 +132,7 @@ final_space = true
 
   [[blocks.segments]]
   type = "typescript"
-  background = "#181818"
+  background = "#181818" # #4063D8
   foreground = "#007ACC"
   leading_diamond = " \ue0b6"
   trailing_diamond = "\ue0b4"
@@ -154,15 +160,10 @@ final_space = true
   template = "  {{ .Major }}.{{ .Minor }} "
 
 
-
-
-
-
-
    [[blocks.segments]]
     type = "status"
     background = "transparent"
-    foreground = "#606060" # #9B6BDF
+    foreground = "#606060" # #606060 #9B6BDF
     leading_diamond = "\ue0b6"
     trailing_diamond = "\ue0b4 "
     foreground_templates = [ "{{ if gt .Code 0 }}#E38073{{ end }}" ]
@@ -191,7 +192,6 @@ final_space = true
 
 
 
-
   [[blocks.segments]]
     type = 'executiontime'
     style = 'plain'
@@ -210,11 +210,18 @@ final_space = true
   newline = true
 
   [[blocks.segments]]
+  foreground = "#a0a0a0"
+  style = "plain"
+  template = "╰─"
+  type = "text"
+
+
+  [[blocks.segments]]
     type = 'text'
     style = 'plain'
     foreground_templates = [
       "{{if gt .Code 0}}#E38073{{end}}",
-      "{{if eq .Code 0}}#9B6BDF{{end}}",
+      "{{if eq .Code 0}}#FFFFFF{{end}}",
     ]   
     background = 'transparent'
     template = '❯'
@@ -225,10 +232,9 @@ final_space = true
     "{{if eq .Code 0}}magenta{{end}}",
   ]
   background = 'transparent'
-  template = '❯ '
+  # template = '❯ '
 
 [secondary_prompt]
   foreground = '#FFFFFF' # magenta
   background = 'transparent'
   template = '❯❯ '
-

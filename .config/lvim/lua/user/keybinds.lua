@@ -11,8 +11,8 @@ vim.api.nvim_set_keymap("n", "<A-Down>", [[:m .+1<CR>==]], { noremap = true, sil
 lvim.keys.normal_mode["<S-h>"] = ":BufferLineCyclePrev<CR>"
 lvim.keys.normal_mode["<S-l>"] = ":BufferLineCycleNext<CR>"
 
-lvim.keys.normal_mode["<S-q>"] = ":vsplit<CR>"
-lvim.keys.normal_mode["<S-n>"] = ":split<CR>"
+-- lvim.keys.normal_mode["<S-q>"] = ":vsplit<CR>"
+-- lvim.keys.normal_mode["<S-n>"] = ":split<CR>"
 
 
 vim.g.user_emmet_leader_key = '<C-y>'
@@ -25,15 +25,15 @@ lvim.builtin.bufferline.icon_custom_colors = true
 vim.api.nvim_set_keymap('n', ':', '<cmd>FineCmdline<CR>', { noremap = true })
 
 
--- vim.cmd([[set relativenumber]])
+vim.cmd([[set relativenumber]])
 
 -- Ativar numeração relativa no modo normal
-vim.cmd([[
-  augroup NumberToggle
-    autocmd!
-    autocmd InsertEnter * set norelativenumber
-    autocmd InsertLeave * set relativenumber
-    autocmd CmdlineEnter * set norelativenumber
-    autocmd CmdlineLeave * set relativenumber
-  augroup END
-]])
+-- vim.cmd([[
+--   augroup NumberToggle
+--     autocmd!
+--     autocmd InsertEnter * set norelativenumber
+--     autocmd InsertLeave * set relativenumber
+--     autocmd CmdlineEnter * set norelativenumber
+--     autocmd CmdlineLeave * set relativenumber
+--   augroup END
+-- ]])

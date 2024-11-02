@@ -1,0 +1,194 @@
+
+schema = "https://raw.githubusercontent.com/JanDeDobbeleer/oh-my-posh/main/themes/schema.json"
+version = 2
+
+[[blocks]]
+alignment = "left"
+type = "prompt"
+
+
+# Novo segmento para a seta ou diamond
+  [[blocks.segments]]
+  foreground = "#808080"  # Defina a cor desejada
+  style = "plain"
+  template = "╭─\ue0b6"   # Ícone que você deseja usar
+  type = "text"
+
+
+  [[blocks.segments]]
+  background = "#808080"
+  foreground = "#ffffff"
+  leading_diamond = "╭─\ue0b6"
+  style = "powerline"
+  type = "os"
+
+
+  [[blocks.segments]]
+  background = "#ef5350"
+  foreground = "#FFFB38"
+  style = "plain"
+  template = "<parentBackground>\ue0b0</> \uf0e7 "
+  type = "root"
+    [blocks.segments.properties]
+    root_icon = "\uf292"
+
+  [[blocks.segments]]
+  background = "#202020"
+  foreground = "#FFFFFF"
+  powerline_symbol = "\ue0b0"
+  style = "powerline"
+  template = " {{ .Path }} "
+  type = "path"
+    [blocks.segments.properties]
+    style = "full"
+
+  [[blocks.segments]]
+    type = "git"
+    style = "powerline"
+    foreground = "#FFFFFF" #43CCEA #FFA86B
+    background = "#111111" # #111111 #181818
+    leading_diamond = " \ue0b6"
+    trailing_diamond = "\ue0b4"
+    foreground_templates = [
+      "{{ if or (.Working.Changed) (.Staging.Changed) }}#FFFFFF{{ end }}", # #FFEB3B
+      "{{ if and (gt .Ahead 0) (gt .Behind 0) }}#FFCC80{{ end }}",
+      "{{ if gt .Ahead 0 }}#B388FF{{ end }}",
+      "{{ if gt .Behind 0 }}#B388FB{{ end }}"
+    ]
+    template = "<#FFFFFF>{{ url .UpstreamIcon .UpstreamURL }}</> {{ .HEAD }}{{if .BranchStatus }} {{ .BranchStatus }}{{ end }}{{ if .Working.Changed }}  <#22d3ee> ?{{.Working.Untracked}}</> ~{{ .Working.Modified }}{{ end }}{{ if and (.Working.Changed) (.Staging.Changed) }} |{{ end }}{{ if .Staging.Changed }}  {{ .Staging.String }}{{ end }}{{ if gt .StashCount 0 }}<#34d399>  {{ .StashCount }}</>{{ end }}"
+
+    [blocks.segments.properties]
+      fetch_status = true
+      branch_max_length = 25
+      fetch_upstream_icon = true
+      truncate_symbol = '…'
+      branch_icon = ' '
+      commit_icon = '@'
+
+[[blocks]]
+alignment = "right"
+type = "prompt"
+
+  # [[blocks.segments]]
+  # background = "#303030"
+  # foreground = "#3C873A"
+  # leading_diamond = " \ue0b6"
+  # style = "diamond"
+  # template = "\ue718 {{ if .PackageManagerIcon }}{{ .PackageManagerIcon }} {{ end }}{{ .Full }}"
+  # trailing_diamond = "\ue0b4"
+  # type = "node"
+  #   [blocks.segments.properties]
+  #   fetch_package_manager = true
+  #   npm_icon = " <#cc3a3a>\ue5fa</> "
+  #   yarn_icon = " <#348cba>\ue6a7</>"
+
+  # [[blocks.segments]]
+  # background = "#40c4ff"
+  # foreground = "#ffffff"
+  # invert_powerline = true
+  # leading_diamond = " \ue0b6"
+  # style = "diamond"
+  # template = " \ue641 {{ .CurrentDate | date .Format }} "
+  # trailing_diamond = "\ue0b4"
+  # type = "time"
+
+  [[blocks.segments]]
+  type = "python"
+  background = "#181818"
+  foreground = "#E4F34A"
+  leading_diamond = "\u256d\u2500\ue0b6"
+  trailing_diamond = "\ue0b4"
+  style = "diamond"
+  template = "  {{ .Major }}.{{ .Minor }} "
+
+  [[blocks.segments]]
+  type = "node"
+  background = "#181818"
+  foreground = "#42E66C"
+  leading_diamond = "\u256d\u2500\ue0b6"
+  trailing_diamond = "\ue0b4"
+  style = "diamond"
+  template = "  {{ .Major }}.{{ .Minor }} "
+
+  [[blocks.segments]]
+  type = "ruby"
+  background = "#181818"
+  foreground = "#E64747"
+  leading_diamond = "\u256d\u2500\ue0b6"
+  trailing_diamond = "\ue0b4"
+  style = "diamond"
+  template = "  {{ .Major }}.{{ .Minor }} "
+
+  [[blocks.segments]]
+  type = "java"
+  background = "#181818"
+  foreground = "#E64747"
+  leading_diamond = "\u256d\u2500\ue0b6"
+  trailing_diamond = "\ue0b4"
+  style = "diamond"
+  template = "  {{ .Major }}.{{ .Minor }} "
+
+  [[blocks.segments]]
+  type = "php"
+  background = "#181818"
+  foreground = "#A872C9"
+  leading_diamond = "\u256d\u2500\ue0b6"
+  trailing_diamond = "\ue0b4"
+  style = "diamond"
+  template = "  {{ .Major }}.{{ .Minor }} "
+
+  [[blocks.segments]]
+  type = "typescript"
+  background = "#181818"
+  foreground = "#007ACC"
+  leading_diamond = "\u256d\u2500\ue0b6"
+  trailing_diamond = "\ue0b4"
+  style = "diamond"
+  template = " 󰛦 {{ .Major }}.{{ .Minor }} "
+
+  [[blocks.segments]]
+  type = "rust"
+  background = "#181818"
+  foreground = "#FFFFFF"
+  leading_diamond = "\u256d\u2500\ue0b6"
+  trailing_diamond = "\ue0b4"
+  style = "diamond"
+  template = "  {{ .Major }}.{{ .Minor }} "
+
+  [[blocks.segments]]
+  type = "dart"
+  background = "#181818"
+  foreground = "#00b4AB"
+  leading_diamond = "\u256d\u2500\ue0b6"
+  trailing_diamond = "\ue0b4"
+  style = "diamond"
+  template = "  {{ .Major }}.{{ .Minor }} "
+
+   [[blocks.segments]]
+    type = "status"
+    foreground = "#606060" # #00897b #9B6BDF
+    foreground_templates = [ "{{ if gt .Code 0 }}#E38073{{ end }}" ]
+    template = " " ## 󰀦  
+
+
+[[blocks]]
+alignment = "left"
+newline = true
+type = "prompt"
+
+  [[blocks.segments]]
+  foreground = "#a0a0a0"
+  style = "plain"
+  template = "╰─"
+  type = "text"
+
+  [[blocks.segments]]
+  foreground = "#FFFFFF"
+  style = "plain"
+  template = "\u276f "
+  type = "status"
+    foreground_templates = [
+      "{{ if gt .Code 0 }}#E38073{{ end }}"
+    ]
+    [blocks.segments.properties]
+    always_enabled = true
