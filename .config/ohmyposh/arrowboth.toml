@@ -164,17 +164,17 @@ final_space = true
 
 
 
-   [[blocks.segments]]
-    type = "status"
-    background = "transparent"
-    foreground = "#606060" # #9B6BDF
-    leading_diamond = "\ue0b6"
-    trailing_diamond = "\ue0b4 "
-    foreground_templates = [ "{{ if gt .Code 0 }}#E38073{{ end }}" ]
-    template = " " ## 󰀦  
+   # [[blocks.segments]]
+   #  type = "status"
+   #  background = "transparent"
+   #  foreground = "#606060" # #9B6BDF
+   #  leading_diamond = "\ue0b6"
+   #  trailing_diamond = "\ue0b4 "
+   #  foreground_templates = [ "{{ if gt .Code 0 }}#E38073{{ end }}" ]
+   #  template = " " ## 󰀦  
 
-      [blocks.segments.properties]
-      always_enabled = true
+   #    [blocks.segments.properties]
+   #    always_enabled = true
 
   # [[blocks.segments]]
   # type = "battery"
