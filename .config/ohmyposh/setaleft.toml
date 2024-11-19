@@ -156,20 +156,17 @@ final_space = true
 
 
 
+   # [[blocks.segments]]
+   #  type = "status"
+   #  background = "transparent"
+   #  foreground = "#606060" # #9B6BDF
+   #  leading_diamond = "\ue0b6"
+   #  trailing_diamond = "\ue0b4 "
+   #  foreground_templates = [ "{{ if gt .Code 0 }}#E38073{{ end }}" ]
+   #  template = " " ## 󰀦  
 
-
-
-   [[blocks.segments]]
-    type = "status"
-    background = "transparent"
-    foreground = "#606060" # #9B6BDF
-    leading_diamond = "\ue0b6"
-    trailing_diamond = "\ue0b4 "
-    foreground_templates = [ "{{ if gt .Code 0 }}#E38073{{ end }}" ]
-    template = " " ## 󰀦  
-
-      [blocks.segments.properties]
-      always_enabled = true
+   #    [blocks.segments.properties]
+   #    always_enabled = true
 
   # [[blocks.segments]]
   # type = "battery"
@@ -191,18 +188,26 @@ final_space = true
 
 
 
+  [[blocks.segments]]
+  background = "#181818"
+  foreground = "#ffffff"
+  invert_powerline = true
+  leading_diamond = " \ue0b6"
+  style = "diamond"
+  template = " \ue641 {{ .CurrentDate | date .Format }} "
+  trailing_diamond = "\ue0b4"
+  type = "time"
+
 
   [[blocks.segments]]
-    type = 'executiontime'
-    style = 'plain'
-    foreground = 'yellow'
-    background = 'transparent'
     template = '{{ .FormattedMs }}'
+    foreground = '#a0a0a0'
+    background = '#181818'
+    type = 'executiontime'
+    style = 'diamond'
 
     [blocks.segments.properties]
       threshold = 5000
-
-
 
 [[blocks]]
   type = 'prompt'

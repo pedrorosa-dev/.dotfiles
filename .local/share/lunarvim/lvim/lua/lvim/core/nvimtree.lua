@@ -158,7 +158,7 @@ function M.config()
          },
          filters = {
             enable = true,
-            dotfiles = false,
+            dotfiles = false, --INFO:Arquivos ocultos, true para ocultar por padrao e false para mostrar por padrao
             git_clean = false,
             git_ignored = false,
             no_bookmark = false,
