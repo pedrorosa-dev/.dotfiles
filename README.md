@@ -75,6 +75,10 @@ rm -rf ~/.config/lvim \
     stow lvimRoot
     ```
 
+    ```bash
+    stow lvimUser && stow lvimRoot
+    ```
+
 6. **Apply all configurations at once**:
     ```bash
     stow .
