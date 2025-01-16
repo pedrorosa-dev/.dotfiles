@@ -14,7 +14,7 @@ Here are the configurations managed in this repository and their respective dest
 - **zsh**: `~/.zshrc`
 - **git**: `~/.gitconfig`
 - **tmux**: `~/.tmux.conf`
-- **fastfetch**: `~/.config/fastfetch/config.jsonc`
+- **fastfetch**: `~/.config/fastfetch`
 - **yabai**: `~/.config/yabai`
 - **skhd**: `~/.config/skhd`
 - **ohmyposh**: `~/.config/ohmyposh`
