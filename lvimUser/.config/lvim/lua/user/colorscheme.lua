@@ -1,4 +1,4 @@
-lvim.colorscheme = "min-theme"
+lvim.colorscheme = "kanagawa-dragon"
 lvim.transparent_window = false
 
 require("nvim-highlight-colors").setup({})
