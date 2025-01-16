@@ -1,0 +1,178 @@
+console_title_template = '{{ .Shell }} in {{ .Folder }}'
+version = 3
+final_space = true
+
+[secondary_prompt]
+  template = '❯❯ '
+  foreground = '#FFFFFF'
+  background = 'transparent'
+
+[transient_prompt]
+  template = '❯ '
+  background = 'transparent'
+  foreground_templates = ['{{if gt .Code 0}}red{{end}}', '{{if eq .Code 0}}magenta{{end}}']
+
+[[blocks]]
+  type = 'prompt'
+  alignment = 'left'
+
+  [[blocks.segments]]
+    leading_diamond = '╭─'
+    trailing_diamond = ' '
+    template = '{{.Icon}}'
+    foreground = '#FFFFFF'
+    background = '#808080'
+    type = 'os'
+    style = 'diamond'
+
+  [[blocks.segments]]
+    leading_diamond = ''
+    trailing_diamond = ''
+    template = ' {{ .Path }}'
+    foreground = '#FFFFFF'
+    background = '#181818'
+    type = 'path'
+    style = 'diamond'
+
+    [blocks.segments.properties]
+      cycle = ['#9B6BDF', '#a6a3a6', '#9B6BDF']
+      folder_icon = ''
+      home_icon = ' '
+      max_width = 20
+      style = 'powerlevel'
+
+
+
+[[blocks]]
+  type = 'prompt'
+  alignment = 'right'
+
+  [[blocks.segments]]
+    leading_diamond = ' '
+    trailing_diamond = ''
+    template = '<#FFFFFF>{{ url .UpstreamIcon .UpstreamURL }}</> {{ .HEAD }}{{if .BranchStatus }} {{ .BranchStatus }}{{ end }}{{ if .Working.Changed }}  <#22d3ee> ?{{.Working.Untracked}}</> ~{{ .Working.Modified }}{{ end }}{{ if and (.Working.Changed) (.Staging.Changed) }} |{{ end }}{{ if .Staging.Changed }}  {{ .Staging.String }}{{ end }}{{ if gt .StashCount 0 }}<#34d399>  {{ .StashCount }}</>{{ end }}'
+    foreground = '#FFFFFF'
+    background = '#1A1A1A'
+    type = 'git'
+    style = 'diamond'
+    foreground_templates = ['{{ if or (.Working.Changed) (.Staging.Changed) }}#FFFFFF{{ end }}', '{{ if and (gt .Ahead 0) (gt .Behind 0) }}#FFCC80{{ end }}', '{{ if gt .Ahead 0 }}#B388FF{{ end }}', '{{ if gt .Behind 0 }}#B388FB{{ end }}']
+
+    [blocks.segments.properties]
+      branch_icon = ' '
+      branch_max_length = 25
+      commit_icon = '@'
+      fetch_status = true
+      fetch_upstream_icon = true
+      truncate_symbol = '…'
+
+  [[blocks.segments]]
+    leading_diamond = ' '
+    trailing_diamond = ''
+    template = '  {{ .Major }}.{{ .Minor }} '
+    foreground = '#E4F34A'
+    background = '#181818'
+    type = 'python'
+    style = 'diamond'
+
+  [[blocks.segments]]
+    leading_diamond = ' '
+    trailing_diamond = ''
+    template = '  {{ .Major }}.{{ .Minor }} '
+    foreground = '#42E66C'
+    background = '#181818'
+    type = 'node'
+    style = 'diamond'
+
+  [[blocks.segments]]
+    leading_diamond = ' '
+    trailing_diamond = ''
+    template = '  {{ .Major }}.{{ .Minor }} '
+    foreground = '#E64747'
+    background = '#181818'
+    type = 'ruby'
+    style = 'diamond'
+
+  [[blocks.segments]]
+    leading_diamond = ' '
+    trailing_diamond = ''
+    template = '  {{ .Major }}.{{ .Minor }} '
+    foreground = '#E64747'
+    background = '#181818'
+    type = 'java'
+    style = 'diamond'
+
+  [[blocks.segments]]
+    leading_diamond = ' '
+    trailing_diamond = ''
+    template = '  {{ .Major }}.{{ .Minor }} '
+    foreground = '#A872C9'
+    background = '#181818'
+    type = 'php'
+    style = 'diamond'
+
+  [[blocks.segments]]
+    leading_diamond = ' '
+    trailing_diamond = ''
+    template = ' 󰛦 {{ .Major }}.{{ .Minor }} '
+    foreground = '#007ACC'
+    background = '#181818'
+    type = 'typescript'
+    style = 'diamond'
+
+  [[blocks.segments]]
+    leading_diamond = ' '
+    trailing_diamond = ''
+    template = '  {{ .Major }}.{{ .Minor }} '
+    foreground = '#FFFFFF'
+    background = '#181818'
+    type = 'rust'
+    style = 'diamond'
+
+  [[blocks.segments]]
+    leading_diamond = ' '
+    trailing_diamond = ''
+    template = '  {{ .Major }}.{{ .Minor }} '
+    foreground = '#00b4AB'
+    background = '#181818'
+    type = 'dart'
+    style = 'diamond'
+
+
+
+  [[blocks.segments]]
+  background = "#181818"
+  foreground = "#ffffff"
+  invert_powerline = true
+  leading_diamond = " \ue0b6"
+  style = "diamond"
+  template = " \ue641 {{ .CurrentDate | date .Format }} "
+  trailing_diamond = "\ue0b4"
+  type = "time"
+
+  [[blocks.segments]]
+    template = '{{ .FormattedMs }}'
+    foreground = '#a0a0a0'
+    background = '#181818'
+    type = 'executiontime'
+    style = 'diamond'
+
+    [blocks.segments.properties]
+      threshold = 5000
+
+[[blocks]]
+  type = 'prompt'
+  alignment = 'left'
+  newline = true
+
+  [[blocks.segments]]
+    template = '╰─'
+    foreground = '#a0a0a0'
+    type = 'text'
+    style = 'plain'
+
+  [[blocks.segments]]
+    template = '❯'
+    background = 'transparent'
+    type = 'text'
+    style = 'plain'
+    foreground_templates = ['{{if gt .Code 0}}#E38073{{end}}', '{{if eq .Code 0}}#FFFFFF{{end}}']

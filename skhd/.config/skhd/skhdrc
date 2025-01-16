@@ -1,0 +1,106 @@
+#### Manage Spaces and Windows #####
+
+
+### Change Spaces Prev-Next ####
+alt - p : yabai -m space --focus prev || yabai -m space --focus last
+alt - n : yabai -m space --focus next || yabai -m space --focus first
+
+### Cycle Through Stacked Windows ####
+rcmd - e : yabai -m window --focus stack.next || yabai -m window --focus stack.first
+rcmd - q : yabai -m window --focus stack.prev || yabai -m window --focus stack.last
+
+### Change Window Focus Within Space ####
+alt - j : (yabai -m window --focus south || yabai -m display --focus south) || (yabai -m window --focus stack.next || yabai -m window --focus stack.first)
+alt - k : (yabai -m window --focus north || yabai -m display --focus north) || (yabai -m window --focus stack.prev || yabai -m window --focus stack.last)
+alt - h : yabai -m window --focus west || yabai -m display --focus west;
+alt - l : yabai -m window --focus east || yabai -m display --focus east; 
+
+### Change Focus Between External Displays ####
+alt - s: yabai -m display --focus west || yabai -m display --focus south
+alt - g: yabai -m display --focus east || yabai -m display --focus north
+
+### Create a New Space and Focus on It ####
+hyper - n : yabai -m space --create && \
+             index="$(yabai -m query --spaces --display | jq 'map(select(.["is-native-fullscreen"] == false))[-1].index')" && \
+             yabai -m space --focus "${index}"
+
+### Destroy Space ####
+alt + shift - d : yabai -m space --destroy
+
+#### Modify Window Layout #####
+
+### Change Layout Style ####
+alt + shift - b : yabai -m space --layout bsp # bsp
+alt + shift - f : yabai -m space --layout stack # stack
+alt + shift - c : yabai -m window --toggle split; yabai -m space --balance; # columns
+# Rotate layout clockwise
+shift + alt - r : yabai -m space --rotate 270
+# Flip along y-axis
+shift + alt - y : yabai -m space --mirror y-axis
+# Flip along x-axis
+shift + alt - x : yabai -m space --mirror x-axis
+# Toggle window float
+shift + alt - t : yabai -m window --toggle float --grid 4:4:1:1:2:2
+
+### Modify the Size of the Windows ####
+# Maximize a window
+shift + alt - m : yabai -m window --toggle zoom-fullscreen
+# Balance out tree of windows (resize to occupy same area)
+shift + alt - e : yabai -m space --balance
+
+# 1/3 width right
+hyper - 0x1E : yabai -m window --ratio rel:0.2
+# 1/3 width left
+hyper - 0x21 : yabai -m window --ratio rel:-0.2
+
+### Move Windows ####
+### Move Window and Split ####
+ctrl + alt - j : yabai -m window --warp south
+ctrl + alt - k : yabai -m window --warp north
+ctrl + alt - h : yabai -m window --warp west
+ctrl + alt - l : yabai -m window --warp east
+
+### Stack Windows ###
+rcmd + rshift - w : yabai -m window --stack north
+rcmd + rshift - a : yabai -m window --stack west
+rcmd + rshift - s : yabai -m window --stack south
+rcmd + rshift - d : yabai -m window --stack east
+
+### Move Window to Display Left and Right ####
+shift + alt - s : yabai -m window --display west || yabai -m window --display south; yabai -m display --focus west || yabai -m display --focus south;
+shift + alt - g : yabai -m window --display east || yabai -m window --display north; yabai -m display --focus east || yabai -m display --focus north;
+
+### Move Window to Prev and Next Space ####
+shift + alt - p : yabai -m window --space prev;
+shift + alt - n : yabai -m window --space next;
+
+### Move Window to Specific Space ####
+shift + alt - 1 : yabai -m window --space 1 --focus;
+shift + alt - 2 : yabai -m window --space 2 --focus;
+shift + alt - 3 : yabai -m window --space 3 --focus;
+shift + alt - 4 : yabai -m window --space 4 --focus;
+shift + alt - 5 : yabai -m window --space 5 --focus;
+shift + alt - 6 : yabai -m window --space 6 --focus;
+shift + alt - 7 : yabai -m window --space 7 --focus;
+shift + alt - 8 : yabai -m window --space 8 --focus;
+shift + alt - 9 : yabai -m window --space 9 --focus;
+
+### Swap Windows ####
+shift + alt - j : yabai -m window --swap south
+shift + alt - k : yabai -m window --swap north
+shift + alt - h : yabai -m window --swap west
+shift + alt - l : yabai -m window --swap east
+
+### Resize Windows ####
+shift + ctrl + alt - h : yabai -m window --resize right:-20:0 2> /dev/null || yabai -m window --resize left:-20:0 2> /dev/null
+shift + ctrl + alt - j : yabai -m window --resize bottom:0:20 2> /dev/null || yabai -m window --resize top:0:20 2> /dev/null
+shift + ctrl + alt - k : yabai -m window --resize bottom:0:-20 2> /dev/null || yabai -m window --resize top:0:-20 2> /dev/null
+shift + ctrl + alt - l : yabai -m window --resize right:20:0 2> /dev/null || yabai -m window --resize left:20:0 2> /dev/null
+
+### Control Yabai Service ####
+ctrl + alt - q : yabai --stop-service
+ctrl + alt - s : yabai --start-service
+ctrl + alt - r : yabai --restart-service
+
+### Spotify Shortcut ####
+lshift + rshift - m : open -a Spotify
