@@ -23,7 +23,7 @@ source $ZSH/oh-my-zsh.sh
 
 
 #lunar vim
-export PATH=/Users/pedrorosa-dev/.local/bin:$PATH
+export PATH=/Users/phrosa/.local/bin:$PATH
 # CONSOLE NINJA 
 PATH=~/.console-ninja/.bin:$PATH
 
@@ -130,11 +130,11 @@ export SDKMAN_DIR="$HOME/.sdkman"
 
 # php
 # Herd injected PHP 8.3 configuration.
-# export HERD_PHP_83_INI_SCAN_DIR="/Users/pedrorosa-dev/Library/Application Support/Herd/config/php/83/"
+# export HERD_PHP_83_INI_SCAN_DIR="/Users/phrosa/Library/Application Support/Herd/config/php/83/"
 
 
 # Herd injected PHP binary.
-export PATH="/Users/pedrorosa-dev/Library/Application Support/Herd/bin/":$PATH
+export PATH="/Users/phrosa/Library/Application Support/Herd/bin/":$PATH
 
 
 # Postgresql
