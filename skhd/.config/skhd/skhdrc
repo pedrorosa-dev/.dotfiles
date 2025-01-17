@@ -48,10 +48,13 @@ shift + alt - m : yabai -m window --toggle zoom-fullscreen
 # Balance out tree of windows (resize to occupy same area)
 shift + alt - e : yabai -m space --balance
 
+
 # 1/3 width right
-hyper - 0x1E : yabai -m window --ratio rel:0.2
+shift + rcmd + alt - d : yabai -m window --ratio rel:0.2
+
 # 1/3 width left
-hyper - 0x21 : yabai -m window --ratio rel:-0.2
+shift + rcmd + alt - s : yabai -m window --ratio rel:-0.2
+
 
 ### Move Windows ####
 ### Move Window and Split ####
@@ -102,5 +105,7 @@ ctrl + alt - q : yabai --stop-service
 ctrl + alt - s : yabai --start-service
 ctrl + alt - r : yabai --restart-service
 
-### Spotify Shortcut ####
+### Apps Shortcut ####
 lshift + rshift - m : open -a Spotify
+lshift + rshift - t : open -a Warp
+
