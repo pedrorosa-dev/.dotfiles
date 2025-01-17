@@ -134,7 +134,7 @@ export SDKMAN_DIR="$HOME/.sdkman"
 
 
 # Herd injected PHP binary.
-export PATH="/Users/phrosa/Library/Application Support/Herd/bin/":$PATH
+# export PATH="/Users/phrosa/Library/Application Support/Herd/bin/":$PATH
 
 
 # Postgresql
