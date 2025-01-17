@@ -106,6 +106,9 @@ ctrl + alt - s : yabai --start-service
 ctrl + alt - r : yabai --restart-service
 
 ### Apps Shortcut ####
-lshift + rshift - m : open -a Spotify
+lshift + rshift - s : open -a Spotify
 lshift + rshift - t : open -a Warp
+lshift + rshift - a: open -a Arc
+lshift + rshift - o: open -a Obsidian
+
 
