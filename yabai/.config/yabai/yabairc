@@ -33,6 +33,7 @@ yabai -m rule --add app="^System Preferences" manage=off
 yabai -m rule --add app="^Calculator$" manage=off
 yabai -m rule --add app="^CleanShot X$" manage=off
 yabai -m rule --add app="^Simulator" manage=off
+yabai -m rule --add app="^Homerow" manage=off
 yabai -m rule --add app="^Raycast$" title="^Settings$" manage=off
 
 # Active borders to show which window is active
