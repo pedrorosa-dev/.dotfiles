@@ -44,6 +44,7 @@ bindkey '^[[B' history-search-forward
 #ALIAS
 alias P="~/Projects"
 alias SP="~/Projects/Studies-py"
+alias NN="~/Projects/Studies-py/neural-networks"
 alias S="~/Projects/Studies"
 alias SD="~/Projects/Studies/Docker"
 alias C="~/Library/Mobile\ Documents/com~apple~CloudDocs"
