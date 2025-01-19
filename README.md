@@ -35,7 +35,7 @@ Follow these steps to use this repository and apply the configurations:
 
 2. **Clone the repository**:
     ```bash
-    git clone https://github.com/pedrorosa-dev/.dotfiles.git
+    git clone https://github.com/pedrorcruzz/.dotfiles.git
     ```
 
 2.5 **Remove existing configuration files (if necessary):** 
