@@ -81,7 +81,7 @@ rm -rf ~/.config/lvim \
 
 6. **Apply all configurations at once**:
     ```bash
-    stow .
+    stow -t ~ .
     ```
 
 **REMEMBER:** Some configs, like `.zshrc` and `.gitconfig`, are set with my name, so just change it to yours.
