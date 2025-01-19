@@ -41,7 +41,7 @@ bindkey '^[[B' history-search-forward
 # fi
 
 
-#ALIAS
+#Alias Directory
 alias P="~/Projects"
 alias SP="~/Projects/Studies-py"
 alias NN="~/Projects/Studies-py/neural-networks"
@@ -50,7 +50,13 @@ alias SD="~/Projects/Studies/Docker"
 alias C="~/Library/Mobile\ Documents/com~apple~CloudDocs"
 alias PC="~/Library/Mobile\ Documents/com~apple~CloudDocs/Projects"
 alias PH="/Applications/XAMPP/xamppfiles/htdocs/projects"
+
+
+#Alias Postgresql
 alias psqlu='psql -U postgres'
+
+
+#Alias System
 alias rn="lvim"
 alias cls='clear'
 alias live='live-server'
@@ -58,14 +64,24 @@ alias ff='fastfetch'
 alias reload-zsh="source ~/.zshrc"
 alias edit-zsh="lvim ~/.zshrc"
 alias lg='lazygit'
-alias img="imgcat"
+
+
+#Alias Docker
+# alias start_project="cd /caminho/do/projeto && docker compose up"
+
+
+#Alias Git
+alias gcn="git clone"
+
+
+#Alias Tmux
 alias tls="tmux list-sessions"
 alias TH="tmux attach-session -t home"
 alias TN="tmux new-session -s home "
 alias taa="tmux attach-session -t "
 alias tnn="tmux new-session -s "
 alias tks="tmux kill-session -t "
-alias gcn="git clone"
+
 
 
 # ----- Bat (better cat) -----
