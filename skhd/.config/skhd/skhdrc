@@ -88,27 +88,27 @@ shift + alt - g : yabai -m window --display east || yabai -m window --display no
 shift + alt - p : yabai -m window --space prev;
 shift + alt - n : yabai -m window --space next;
 
-### Move Window to Specific Space and focus ####
-lshift + rshift - 1 : yabai -m window --space 1 --focus;
-lshift + rshift - 2 : yabai -m window --space 2 --focus;
-lshift + rshift - 3 : yabai -m window --space 3 --focus;
-lshift + rshift - 4 : yabai -m window --space 4 --focus;
-lshift + rshift - 5 : yabai -m window --space 5 --focus;
-lshift + rshift - 6 : yabai -m window --space 6 --focus;
-lshift + rshift - 7 : yabai -m window --space 7 --focus;
-lshift + rshift - 8 : yabai -m window --space 8 --focus;
-lshift + rshift - 9 : yabai -m window --space 9 --focus;
-
 ### Move Window to Specific Space####
-shift + alt - 1 : yabai -m window --space 1 
-shift + alt - 2 : yabai -m window --space 2
-shift + alt - 3 : yabai -m window --space 3
-shift + alt - 4 : yabai -m window --space 4
-shift + alt - 5 : yabai -m window --space 5
-shift + alt - 6 : yabai -m window --space 6
-shift + alt - 7 : yabai -m window --space 7
-shift + alt - 8 : yabai -m window --space 8
-shift + alt - 9 : yabai -m window --space 9
+lshift + rshift - 1 : yabai -m window --space 1
+lshift + rshift - 2 : yabai -m window --space 2
+lshift + rshift - 3 : yabai -m window --space 3
+lshift + rshift - 4 : yabai -m window --space 4
+lshift + rshift - 5 : yabai -m window --space 5
+lshift + rshift - 6 : yabai -m window --space 6
+lshift + rshift - 7 : yabai -m window --space 7
+lshift + rshift - 8 : yabai -m window --space 8 
+lshift + rshift - 9 : yabai -m window --space 9 
+
+### Move Window to Specific Space and focus ####
+shift + alt - 1 : yabai -m window --space 1 --focus;
+shift + alt - 2 : yabai -m window --space 2 --focus;
+shift + alt - 3 : yabai -m window --space 3 --focus;
+shift + alt - 4 : yabai -m window --space 4 --focus;
+shift + alt - 5 : yabai -m window --space 5 --focus;
+shift + alt - 6 : yabai -m window --space 6 --focus;
+shift + alt - 7 : yabai -m window --space 7 --focus;
+shift + alt - 8 : yabai -m window --space 8 --focus;
+shift + alt - 9 : yabai -m window --space 9 --focus;
 
 
 ### Swap Windows ####
