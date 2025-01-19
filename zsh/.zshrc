@@ -6,7 +6,7 @@ ZSH_THEME="minimal"
 
 
 ## oh my posh
-# alguns temas - tokyonight_storm, catppuccin_mocha
+# alguns temas - tokyonight_storm, catppuccin_mocha, star, json
 eval "$(oh-my-posh init zsh --config $(brew --prefix oh-my-posh)/themes/tokyonight_storm.omp.json)"
 
 # CONFIG PESSOAL DO ohmyposh 
