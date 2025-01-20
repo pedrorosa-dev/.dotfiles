@@ -31,12 +31,17 @@ alt - s: yabai -m display --focus west || yabai -m display --focus south
 alt - g: yabai -m display --focus east || yabai -m display --focus north
 
 ### Create a New Space and Focus on It ####
-hyper - n : yabai -m space --create && \
+rshift + ctrl - m : yabai -m space --create && \
              index="$(yabai -m query --spaces --display | jq 'map(select(.["is-native-fullscreen"] == false))[-1].index')" && \
              yabai -m space --focus "${index}"
 
+### Create a New Space ####
+rshift + ctrl - n : yabai -m space --create && \
+             index="$(yabai -m query --spaces --display | jq 'map(select(.["is-native-fullscreen"] == false))[-1].index')" && \
+             yabai -m space  "${index}"
+
 ### Destroy Space ####
-alt + shift - d : yabai -m space --destroy
+rshift + ctrl - d : yabai -m space --destroy
 
 #### Modify Window Layout #####
 
